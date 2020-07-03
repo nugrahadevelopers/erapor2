@@ -18,6 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('login', 'Api\Auth\LoginController@login');
+Route::post('register', 'Api\Auth\LoginController@register');
+
+Route::group(['middleware' => ['auth:api']], function () {
+    Route::post('logout', 'Api\Auth\LoginController@logout');
+});
+
 Route::get('/gurus', 'GurusController@index');
 Route::post('/gurus/store', 'GurusController@store');
 Route::get('/gurus/{id?}', 'GurusController@show');
