@@ -1,0 +1,136 @@
+<template>
+    <div class="container-fluid">
+        <div class="card mb-4 mt-5">
+            <div class="card-header d-flex">
+                <i class="fas fa-chart-area mr-1"></i>
+                Data Guru
+                <button class="btn btn-primary btn-sm ml-auto" v-on:click="showNewGuruModal"><span class="fa fa-plus"></span> Tambah Guru</button>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Nama</td>
+                            <td>NOMOR HP</td>
+                            <td>ALAMAT</td>
+                            <td>AKSI</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(guru, index) in gurus" :key="index">
+                            <td>{{ index+1 }}</td>
+                            <td>{{ guru.name }}</td>
+                            <td>{{ guru.phone }}</td>
+                            <td>{{ guru.address }}</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm"><span class="fa fa-edit"></span></button>
+                                <button class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <b-modal ref="newGuruModal" hide-footer title="Tambah Data Guru">
+            <div class="d-block">
+                <form v-on:submit.prevent="createGuru">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" v-model="guruData.name" class="form-control" id="name" placeholder="Masukan Nama Guru">
+                        <div class="invalid-feedback" v-if="errors.name">{{ errors.name[0] }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Nomor HP</label>
+                        <input type="text" v-model="guruData.phone" class="form-control" id="phone" placeholder="Masukan Nomor HP Guru">
+                        <div class="invalid-feedback" v-if="errors.phone">{{ errors.phone[0] }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Alamat</label>
+                        <input type="text" v-model="guruData.address" class="form-control" id="address" placeholder="Masukan Alamat Guru">
+                        <div class="invalid-feedback" v-if="errors.address">{{ errors.address[0] }}</div>
+                    </div>
+
+                    <hr>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-default" v-on:click="hideNewGuruModal">Batal</button>
+                        <button type="submit" class="btn btn-primary"><span 
+                        class="fa fa-check"></span> Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </b-modal>
+
+    </div>
+</template>
+
+<script>
+    import * as guruService from '../services/guru_service';
+    export default {
+        name: 'guru',
+        data() {
+            return {
+                gurus: [],
+                guruData: {
+                    name: '',
+                    phone: '',
+                    address: ''
+                },
+
+                errors: {}
+            }
+        },
+        mounted() {
+            this.loadGurus();
+        },
+        methods: {
+            hideNewGuruModal() {
+                this.$refs.newGuruModal.hide();
+            },
+            showNewGuruModal() {
+                this.$refs.newGuruModal.show();
+            },
+            loadGurus: async function() {
+                try {
+                    const response = await guruService.loadGurus();
+                    this.gurus = response.data.data;
+                } catch (error) {
+                    this.flashMessage.error({
+                        message: error,
+                        time: 5000
+                    });
+                }
+            },
+            createGuru: async function() {
+                let formData = new FormData();
+                formData.append('name', this.guruData.name);
+                formData.append('phone', this.guruData.phone);
+                formData.append('address', this.guruData.address);
+
+                try {
+                    const response = await guruService.createGuru(formData);
+                    this.gurus.unshift(response.data);
+                    this.hideNewGuruModal();
+                    this.flashMessage.success({
+                        message: 'Data Guru Berhasil Ditambahkan',
+                        time: 5000
+                    });
+                } catch (error) {
+                    switch (error.response.status) {
+                        case 422:
+                            this.errors = error.response.data.errors;
+                            break;
+                        default:
+                            this.flashMessage.error({
+                                title: 'Error',
+                                message: error,
+                                time: 5000
+                            });
+                            break;
+                    }
+                }
+            }
+        }
+    }
+</script>
