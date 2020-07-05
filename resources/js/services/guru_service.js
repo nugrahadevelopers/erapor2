@@ -15,3 +15,7 @@ export function deleteGuru(id) {
 export function updateGuru(id, data) {
     return httpFile().post(`/guru/${id}`, data);
 }
+
+export function loadMore(nextPage) {
+    return http().get(`/guru?page=${nextPage}`);
+}

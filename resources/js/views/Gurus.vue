@@ -30,6 +30,11 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <div class="text-center" v-show="moreExists">
+                    <button type="button" class="btn btn-primary btn-sm" v-on:click="loadMore"><span class="fa fa-arrow-down"></span>
+                        Lebih Banyak</button>
+                </div>
             </div>
         </div>
 
@@ -106,6 +111,8 @@
                     phone: '',
                     address: ''
                 },
+                moreExists: false,
+                nextPage: 0,
                 editGuruData: {},
                 errors: {}
             }
@@ -124,6 +131,13 @@
                 try {
                     const response = await guruService.loadGurus();
                     this.gurus = response.data.data;
+
+                    if(response.data.current_page < response.data.last_page) {
+                        this.moreExists = true;
+                        this.nextPage = response.data.current_page + 1;
+                    } else {
+                        this.moreExists = false;
+                    }
                 } catch (error) {
                     this.flashMessage.error({
                         message: 'Terjadi masalah silahkan refresh halaman ini!',
@@ -218,6 +232,26 @@
                     this.flashMessage.success({
                         message: 'Data Guru Berhasil Diubah',
                         time: 5000
+                    });
+                } catch (error) {
+                    this.flashMessage.error({
+                        message: error.response.data.message,
+                        time: 5000
+                    });
+                }
+            },
+            loadMore: async function() {
+                try {
+                    const response = await guruService.loadMore(this.nextPage);
+                    if(response.data.current_page < response.data.last_page) {
+                        this.moreExists = true;
+                        this.nextPage = response.data.current_page + 1;
+                    } else {
+                        this.moreExists = false;
+                    }
+
+                    response.data.data.forEach(data => {
+                        this.gurus.push(data);
                     });
                 } catch (error) {
                     this.flashMessage.error({
