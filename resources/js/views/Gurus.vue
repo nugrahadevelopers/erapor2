@@ -24,8 +24,8 @@
                             <td>{{ guru.phone }}</td>
                             <td>{{ guru.address }}</td>
                             <td>
-                                <button class="btn btn-primary btn-sm"><span class="fa fa-edit"></span></button>
-                                <button class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></button>
+                                <button class="btn btn-primary btn-sm" v-on:click="editGuru(guru)"><span class="fa fa-edit"></span></button>
+                                <button class="btn btn-danger btn-sm" v-on:click="deleteGuru(guru)"><span class="fa fa-trash"></span></button>
                             </td>
                         </tr>
                     </tbody>
@@ -62,6 +62,35 @@
             </div>
         </b-modal>
 
+        <b-modal ref="editGuruModal" hide-footer title="Ubah Data Guru">
+            <div class="d-block">
+                <form v-on:submit.prevent="updateGuru">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" v-model="editGuruData.name" class="form-control" id="name" placeholder="Masukan Nama Guru">
+                        <div class="invalid-feedback" v-if="errors.name">{{ errors.name[0] }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Nomor HP</label>
+                        <input type="text" v-model="editGuruData.phone" class="form-control" id="phone" placeholder="Masukan Nomor HP Guru">
+                        <div class="invalid-feedback" v-if="errors.phone">{{ errors.phone[0] }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Alamat</label>
+                        <input type="text" v-model="editGuruData.address" class="form-control" id="address" placeholder="Masukan Alamat Guru">
+                        <div class="invalid-feedback" v-if="errors.address">{{ errors.address[0] }}</div>
+                    </div>
+
+                    <hr>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-default" v-on:click="hideEditGuruModal">Batal</button>
+                        <button type="submit" class="btn btn-primary"><span 
+                        class="fa fa-check"></span> Ubah</button>
+                    </div>
+                </form>
+            </div>
+        </b-modal>
+
     </div>
 </template>
 
@@ -77,7 +106,7 @@
                     phone: '',
                     address: ''
                 },
-
+                editGuruData: {},
                 errors: {}
             }
         },
@@ -97,7 +126,7 @@
                     this.gurus = response.data.data;
                 } catch (error) {
                     this.flashMessage.error({
-                        message: error,
+                        message: 'Terjadi masalah silahkan refresh halaman ini!',
                         time: 5000
                     });
                 }
@@ -116,6 +145,11 @@
                         message: 'Data Guru Berhasil Ditambahkan',
                         time: 5000
                     });
+                    this.guruData = {
+                        name: '',
+                        phone: '',
+                        address: ''
+                    };
                 } catch (error) {
                     switch (error.response.status) {
                         case 422:
@@ -123,12 +157,73 @@
                             break;
                         default:
                             this.flashMessage.error({
-                                title: 'Error',
-                                message: error,
+                                message: 'Terjadi masalah silahkan refresh halaman ini!',
                                 time: 5000
                             });
                             break;
                     }
+                }
+            },
+            deleteGuru: async function(guru) {
+                if(!window.confirm(`Anda Akan Menghapus ${guru.name}`)) {
+                    return;
+                }
+
+                try {
+                    await guruService.deleteGuru(guru.id);
+
+                    this.gurus = this.gurus.filter(obj => {
+                        return obj.id != guru.id;
+                    });
+                    this.flashMessage.success({
+                        message: 'Data Guru Berhasil Dihapus',
+                        time: 5000
+                    });
+                } catch (error) {
+                    this.flashMessage.error({
+                        message: error.response.data.message,
+                        time: 5000
+                    });
+                }
+            },
+            hideEditGuruModal() {
+                this.$refs.editGuruModal.hide();
+            },
+            showEditGuruModal() {
+                this.$refs.editGuruModal.show();
+            },
+            editGuru(guru) {
+                this.editGuruData = {...guru};
+                this.showEditGuruModal();
+            },
+            updateGuru: async function() {
+                try {
+                    const formData = new FormData();
+                    formData.append('name', this.editGuruData.name);
+                    formData.append('phone', this.editGuruData.phone);
+                    formData.append('address', this.editGuruData.address);
+                    formData.append('_method', 'put');
+
+                    const response = await guruService.updateGuru(this.editGuruData.id, formData);
+                    this.gurus.map(guru => {
+                        if(guru.id == response.data.id) {
+                            for(let key in response.data) {
+                                guru[key] = response.data[key];
+                            }
+                        }
+                    });
+                    
+                    this.hideEditGuruModal();
+
+                    this.flashMessage.success({
+                        message: 'Data Guru Berhasil Diubah',
+                        time: 5000
+                    });
+                } catch (error) {
+                    this.flashMessage.error({
+                        message: error.response.data.message,
+                        time: 5000
+                    });
                 }
             }
         }

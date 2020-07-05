@@ -46,9 +46,15 @@ class GuruController extends Controller
         $guru->name = $request->name;
         $guru->phone = $request->phone;
         $guru->address = $request->address;
-        $guru->save();
 
-        dd($request->all());
+        if($guru->save()) {
+            return response()->json($guru, 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
     }
 
     /**
@@ -82,7 +88,26 @@ class GuruController extends Controller
      */
     public function update(Request $request, Guru $guru)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+        ]);
+
+        $guru->name = $request->name;
+        $guru->phone = $request->phone;
+        $guru->address = $request->address;
+
+        if($guru->save()) {
+            return response()->json($guru, 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
+
+        dd($request->all(), $guru);
     }
 
     /**
@@ -93,6 +118,16 @@ class GuruController extends Controller
      */
     public function destroy(Guru $guru)
     {
-        //
+        if($guru->delete()) {
+            return response()->json([
+                'message' => 'Berhasil Dihapus',
+                'status' => 200
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
     }
 }

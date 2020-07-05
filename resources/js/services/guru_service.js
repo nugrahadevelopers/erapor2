@@ -7,3 +7,11 @@ export function createGuru(data) {
 export function loadGurus() {
     return http().get('/guru');
 }
+
+export function deleteGuru(id) {
+    return http().delete(`/guru/${id}`);
+}
+
+export function updateGuru(id, data) {
+    return httpFile().post(`/guru/${id}`, data);
+}
