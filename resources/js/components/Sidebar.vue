@@ -37,8 +37,9 @@
                             <router-link to="/guru" class="nav-link" exact>
                                 Guru
                             </router-link>
-                            <a class="nav-link" href="layout-sidenav-light.html"
-                                >Siswa</a>
+                            <router-link to="/siswa" class="nav-link" exact>
+                                Siswa
+                            </router-link>
                         </nav>
                     </div>
                 </div>

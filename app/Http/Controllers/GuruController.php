@@ -106,8 +106,6 @@ class GuruController extends Controller
                 'status' => 500
             ], 500);
         }
-
-        dd($request->all(), $guru);
     }
 
     /**

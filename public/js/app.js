@@ -62159,11 +62159,9 @@ var staticRenderFns = [
       "nav",
       { staticClass: "sb-topnav navbar navbar-expand navbar-dark bg-dark" },
       [
-        _c(
-          "a",
-          { staticClass: "navbar-brand", attrs: { href: "index.html" } },
-          [_vm._v("E-RAPOR DISTECH V1.0")]
-        ),
+        _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+          _vm._v("E-RAPOR DISTECH V1.0")
+        ]),
         _vm._v(" "),
         _c(
           "button",
@@ -62338,12 +62336,16 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c(
-                        "a",
+                        "router-link",
                         {
                           staticClass: "nav-link",
-                          attrs: { href: "layout-sidenav-light.html" }
+                          attrs: { to: "/siswa", exact: "" }
                         },
-                        [_vm._v("Siswa")]
+                        [
+                          _vm._v(
+                            "\n                            Siswa\n                        "
+                          )
+                        ]
                       )
                     ],
                     1
@@ -79309,6 +79311,12 @@ var routes = [{
   name: 'guru',
   component: function component() {
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./views/Gurus.vue */ "./resources/js/views/Gurus.vue"));
+  }
+}, {
+  path: '/siswa',
+  name: 'siswa',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./views/Siswas.vue */ "./resources/js/views/Siswas.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

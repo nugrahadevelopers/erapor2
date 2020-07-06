@@ -1,6 +1,6 @@
 <template>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">E-RAPOR DISTECH V1.0</a>
+        <a class="navbar-brand" href="#">E-RAPOR DISTECH V1.0</a>
         <button
             class="btn btn-link btn-sm order-1 order-lg-0"
             id="sidebarToggle"

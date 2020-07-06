@@ -8,12 +8,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     </head>
     <body>
         <div id="app"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/scripts.js') }}"></script>
     </body>
 </html>
