@@ -30,6 +30,11 @@ const routes = [{
         path: '/kelas',
         name: 'kelas',
         component: () => import('./views/Kelass.vue')
+    },
+    {
+        path: '/ekskul',
+        name: 'ekskul',
+        component: () => import('./views/Ekskuls.vue')
     }
 ]
 

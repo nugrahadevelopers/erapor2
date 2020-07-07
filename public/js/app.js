@@ -62378,6 +62378,15 @@ var render = function() {
                           attrs: { to: "/kelas", exact: "" }
                         },
                         [_vm._v("Kelas")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/ekskul", exact: "" }
+                        },
+                        [_vm._v("Ekstrakulikuler")]
                       )
                     ],
                     1
@@ -79388,6 +79397,12 @@ var routes = [{
   name: 'kelas',
   component: function component() {
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./views/Kelass.vue */ "./resources/js/views/Kelass.vue"));
+  }
+}, {
+  path: '/ekskul',
+  name: 'ekskul',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./views/Ekskuls.vue */ "./resources/js/views/Ekskuls.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

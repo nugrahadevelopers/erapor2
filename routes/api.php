@@ -22,3 +22,4 @@ Route::resource('guru', 'GuruController');
 Route::resource('siswa', 'SiswaController');
 Route::resource('mapel', 'MapelController');
 Route::resource('kela', 'KelaController');
+Route::resource('ekskul', 'EkskulController');
