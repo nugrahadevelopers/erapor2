@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Guru;
+use App\Kela;
 use Illuminate\Http\Request;
 
-class GuruController extends Controller
+class KelaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $gurus = Guru::orderBy('created_at', 'desc')->paginate(5);
-        return response()->json($gurus, 200);
+        $kelas = Kela::orderBy('created_at', 'desc')->paginate(5);
+        return response()->json($kelas, 200);
     }
 
     /**
@@ -37,18 +37,16 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:gurus',
-            'phone' => 'required',
-            'address' => 'required',
+            'tingkat' => 'required',
+            'nama_kelas' => 'required'
         ]);
 
-        $guru = new Guru();
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $kela = new Kela();
+        $kela->tingkat = $request->tingkat;
+        $kela->nama_kelas = $request->nama_kelas;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($kela->save()) {
+            return response()->json($kela, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -60,10 +58,10 @@ class GuruController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kela  $kela
      * @return \Illuminate\Http\Response
      */
-    public function show(Guru $guru)
+    public function show(Kela $kela)
     {
         //
     }
@@ -71,10 +69,10 @@ class GuruController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kela  $kela
      * @return \Illuminate\Http\Response
      */
-    public function edit(Guru $guru)
+    public function edit(Kela $kela)
     {
         //
     }
@@ -83,23 +81,21 @@ class GuruController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Guru  $guru
+     * @param  \App\Kela  $kela
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Guru $guru)
+    public function update(Request $request, Kela $kela)
     {
         $request->validate([
-            'name' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
+            'tingkat' => 'required',
+            'nama_kelas' => 'required'
         ]);
 
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $kela->tingkat = $request->tingkat;
+        $kela->nama_kelas = $request->nama_kelas;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($kela->save()) {
+            return response()->json($kela, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -111,12 +107,12 @@ class GuruController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kela  $kela
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Guru $guru)
+    public function destroy(Kela $kela)
     {
-        if ($guru->delete()) {
+        if ($kela->delete()) {
             return response()->json([
                 'message' => 'Berhasil Dihapus',
                 'status' => 200

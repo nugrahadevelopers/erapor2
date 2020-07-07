@@ -6,8 +6,7 @@ import Welcome from './views/Welcome.vue';
 
 Vue.use(Router);
 
-const routes = [
-    {
+const routes = [{
         path: '/',
         name: 'welcome',
         component: Welcome
@@ -21,6 +20,16 @@ const routes = [
         path: '/siswa',
         name: 'siswa',
         component: () => import('./views/Siswas.vue')
+    },
+    {
+        path: '/mapel',
+        name: 'mapel',
+        component: () => import('./views/Mapels.vue')
+    },
+    {
+        path: '/kelas',
+        name: 'kelas',
+        component: () => import('./views/Kelass.vue')
     }
 ]
 

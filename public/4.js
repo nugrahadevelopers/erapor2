@@ -1,9 +1,9 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Gurus.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Kelass.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Kelass.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_guru_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/guru_service */ "./resources/js/services/guru_service.js");
+/* harmony import */ var _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/kelas_service */ "./resources/js/services/kelas_service.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -149,59 +149,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "guru",
+  name: "kelas",
   data: function data() {
     return {
-      gurus: [],
-      guruData: {
-        name: "",
-        phone: "",
-        address: ""
+      kelass: [],
+      kelasData: {
+        tingkat: "",
+        nama_kelas: ""
       },
       moreExists: false,
       nextPage: 0,
-      editGuruData: {},
+      editKelasData: {},
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadGurus();
+    this.loadKelass();
   },
   methods: {
-    hideNewGuruModal: function hideNewGuruModal() {
-      this.$refs.newGuruModal.hide();
+    hideNewKelasModal: function hideNewKelasModal() {
+      this.$refs.newKelasModal.hide();
     },
-    showNewGuruModal: function showNewGuruModal() {
-      this.$refs.newGuruModal.show();
+    showNewKelasModal: function showNewKelasModal() {
+      this.$refs.newKelasModal.show();
     },
-    loadGurus: function () {
-      var _loadGurus = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    loadKelass: function () {
+      var _loadKelass = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -209,11 +184,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["loadGurus"]();
+                return _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__["loadKelass"]();
 
               case 3:
                 response = _context.sent;
-                this.gurus = response.data.data;
+                this.kelass = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
                   this.moreExists = true;
@@ -241,82 +216,80 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this, [[0, 8]]);
       }));
 
-      function loadGurus() {
-        return _loadGurus.apply(this, arguments);
+      function loadKelass() {
+        return _loadKelass.apply(this, arguments);
       }
 
-      return loadGurus;
+      return loadKelass;
     }(),
-    createGuru: function () {
-      var _createGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    createKelas: function () {
+      var _createKelas = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 formData = new FormData();
-                formData.append("name", this.guruData.name);
-                formData.append("phone", this.guruData.phone);
-                formData.append("address", this.guruData.address);
-                _context2.prev = 4;
-                _context2.next = 7;
-                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["createGuru"](formData);
+                formData.append("tingkat", this.kelasData.tingkat);
+                formData.append("nama_kelas", this.kelasData.nama_kelas);
+                _context2.prev = 3;
+                _context2.next = 6;
+                return _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__["createKelas"](formData);
 
-              case 7:
+              case 6:
                 response = _context2.sent;
-                this.gurus.unshift(response.data);
-                this.hideNewGuruModal();
+                this.kelass.unshift(response.data);
+                this.hideNewKelasModal();
                 this.flashMessage.success({
-                  message: "Data Guru Berhasil Ditambahkan",
+                  message: "Data Kelas Berhasil Ditambahkan",
                   time: 5000
                 });
-                this.guruData = {
-                  name: "",
-                  phone: "",
-                  address: ""
+                this.kelasData = {
+                  tingkat: "",
+                  nama_kelas: ""
                 };
-                _context2.next = 23;
+                _context2.next = 22;
                 break;
 
-              case 14:
-                _context2.prev = 14;
-                _context2.t0 = _context2["catch"](4);
+              case 13:
+                _context2.prev = 13;
+                _context2.t0 = _context2["catch"](3);
                 _context2.t1 = _context2.t0.response.status;
-                _context2.next = _context2.t1 === 422 ? 19 : 21;
+                _context2.next = _context2.t1 === 422 ? 18 : 20;
                 break;
 
-              case 19:
+              case 18:
                 this.errors = _context2.t0.response.data.errors;
-                return _context2.abrupt("break", 23);
+                return _context2.abrupt("break", 22);
 
-              case 21:
+              case 20:
                 this.flashMessage.error({
                   message: "Terjadi masalah silahkan refresh halaman ini!",
                   time: 5000
                 });
-                return _context2.abrupt("break", 23);
+                return _context2.abrupt("break", 22);
 
-              case 23:
+              case 22:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[4, 14]]);
+        }, _callee2, this, [[3, 13]]);
       }));
 
-      function createGuru() {
-        return _createGuru.apply(this, arguments);
+      function createKelas() {
+        return _createKelas.apply(this, arguments);
       }
 
-      return createGuru;
+      return createKelas;
     }(),
-    deleteGuru: function () {
-      var _deleteGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(guru) {
+    deleteKelas: function () {
+      var _deleteKelas = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(kelas) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                if (window.confirm("Anda Akan Menghapus ".concat(guru.name))) {
+                if (window.confirm("Anda Akan Menghapus ".concat(kelas.nama_kelas))) {
                   _context3.next = 2;
                   break;
                 }
@@ -326,14 +299,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["deleteGuru"](guru.id);
+                return _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__["deleteKelas"](kelas.id);
 
               case 5:
-                this.gurus = this.gurus.filter(function (obj) {
-                  return obj.id != guru.id;
+                this.kelass = this.kelass.filter(function (obj) {
+                  return obj.id != kelas.id;
                 });
                 this.flashMessage.success({
-                  message: "Data Guru Berhasil Dihapus",
+                  message: "Data Kelas Berhasil Dihapus",
                   time: 5000
                 });
                 _context3.next = 12;
@@ -355,24 +328,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3, this, [[2, 9]]);
       }));
 
-      function deleteGuru(_x) {
-        return _deleteGuru.apply(this, arguments);
+      function deleteKelas(_x) {
+        return _deleteKelas.apply(this, arguments);
       }
 
-      return deleteGuru;
+      return deleteKelas;
     }(),
-    hideEditGuruModal: function hideEditGuruModal() {
-      this.$refs.editGuruModal.hide();
+    hideEditKelasModal: function hideEditKelasModal() {
+      this.$refs.editKelasModal.hide();
     },
-    showEditGuruModal: function showEditGuruModal() {
-      this.$refs.editGuruModal.show();
+    showEditKelasModal: function showEditKelasModal() {
+      this.$refs.editKelasModal.show();
     },
-    editGuru: function editGuru(guru) {
-      this.editGuruData = _objectSpread({}, guru);
-      this.showEditGuruModal();
+    editKelas: function editKelas(kelas) {
+      this.editKelasData = _objectSpread({}, kelas);
+      this.showEditKelasModal();
     },
-    updateGuru: function () {
-      var _updateGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    updateKelas: function () {
+      var _updateKelas = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -380,51 +353,50 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context4.prev = 0;
                 formData = new FormData();
-                formData.append("name", this.editGuruData.name);
-                formData.append("phone", this.editGuruData.phone);
-                formData.append("address", this.editGuruData.address);
+                formData.append("tingkat", this.editKelasData.tingkat);
+                formData.append("nama_kelas", this.editKelasData.nama_kelas);
                 formData.append("_method", "put");
-                _context4.next = 8;
-                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["updateGuru"](this.editGuruData.id, formData);
+                _context4.next = 7;
+                return _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__["updateKelas"](this.editKelasData.id, formData);
 
-              case 8:
+              case 7:
                 response = _context4.sent;
-                this.gurus.map(function (guru) {
-                  if (guru.id == response.data.id) {
+                this.kelass.map(function (kelas) {
+                  if (kelas.id == response.data.id) {
                     for (var key in response.data) {
-                      guru[key] = response.data[key];
+                      kelas[key] = response.data[key];
                     }
                   }
                 });
-                this.hideEditGuruModal();
+                this.hideEditKelasModal();
                 this.flashMessage.success({
-                  message: "Data Guru Berhasil Diubah",
+                  message: "Data Kelas Berhasil Diubah",
                   time: 5000
                 });
-                _context4.next = 17;
+                _context4.next = 16;
                 break;
 
-              case 14:
-                _context4.prev = 14;
+              case 13:
+                _context4.prev = 13;
                 _context4.t0 = _context4["catch"](0);
                 this.flashMessage.error({
                   message: _context4.t0.response.data.message,
                   time: 5000
                 });
 
-              case 17:
+              case 16:
               case "end":
                 return _context4.stop();
             }
           }
-        }, _callee4, this, [[0, 14]]);
+        }, _callee4, this, [[0, 13]]);
       }));
 
-      function updateGuru() {
-        return _updateGuru.apply(this, arguments);
+      function updateKelas() {
+        return _updateKelas.apply(this, arguments);
       }
 
-      return updateGuru;
+      return updateKelas;
     }(),
     loadMore: function () {
       var _loadMore = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
@@ -437,7 +409,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context5.prev = 0;
                 _context5.next = 3;
-                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
+                return _services_kelas_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
 
               case 3:
                 response = _context5.sent;
@@ -450,7 +422,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.gurus.push(data);
+                  _this.kelass.push(data);
                 });
                 _context5.next = 11;
                 break;
@@ -482,10 +454,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a& ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564& ***!
+  \****************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -504,16 +476,16 @@ var render = function() {
       _c("div", { staticClass: "card mb-4 mt-5" }, [
         _c("div", { staticClass: "card-header d-flex" }, [
           _c("i", { staticClass: "fas fa-chart-area mr-1" }),
-          _vm._v("\n      Data Guru\n      "),
+          _vm._v("\n      Data Kelas\n      "),
           _c(
             "button",
             {
               staticClass: "btn btn-primary btn-sm ml-auto",
-              on: { click: _vm.showNewGuruModal }
+              on: { click: _vm.showNewKelasModal }
             },
             [
               _c("span", { staticClass: "fa fa-plus" }),
-              _vm._v(" Tambah Guru\n      ")
+              _vm._v(" Tambah Kelas\n      ")
             ]
           )
         ]),
@@ -524,15 +496,13 @@ var render = function() {
             _vm._v(" "),
             _c(
               "tbody",
-              _vm._l(_vm.gurus, function(guru, index) {
+              _vm._l(_vm.kelass, function(kelas, index) {
                 return _c("tr", { key: index }, [
                   _c("td", [_vm._v(_vm._s(index + 1))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(guru.name))]),
+                  _c("td", [_vm._v(_vm._s(kelas.tingkat))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(guru.phone))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(guru.address))]),
+                  _c("td", [_vm._v(_vm._s(kelas.nama_kelas))]),
                   _vm._v(" "),
                   _c("td", [
                     _c(
@@ -541,7 +511,7 @@ var render = function() {
                         staticClass: "btn btn-primary btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.editGuru(guru)
+                            return _vm.editKelas(kelas)
                           }
                         }
                       },
@@ -554,7 +524,7 @@ var render = function() {
                         staticClass: "btn btn-danger btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.deleteGuru(guru)
+                            return _vm.deleteKelas(kelas)
                           }
                         }
                       },
@@ -601,8 +571,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "newGuruModal",
-          attrs: { "hide-footer": "", title: "Tambah Data Guru" }
+          ref: "newKelasModal",
+          attrs: { "hide-footer": "", title: "Tambah Kelas" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -612,14 +582,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.createGuru($event)
+                    return _vm.createKelas($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [
-                    _vm._v("Nama Lengkap")
+                  _c("label", { attrs: { for: "tingkat" } }, [
+                    _vm._v("Tingkat")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -627,37 +597,37 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.guruData.name,
-                        expression: "guruData.name"
+                        value: _vm.kelasData.tingkat,
+                        expression: "kelasData.tingkat"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "name",
-                      placeholder: "Masukan Nama Guru"
+                      id: "tingkat",
+                      placeholder: "Masukan Tingkat"
                     },
-                    domProps: { value: _vm.guruData.name },
+                    domProps: { value: _vm.kelasData.tingkat },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(_vm.guruData, "name", $event.target.value)
+                        _vm.$set(_vm.kelasData, "tingkat", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.name
+                  _vm.errors.tingkat
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.name[0]))
+                        _vm._v(_vm._s(_vm.errors.tingkat[0]))
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "phone" } }, [
-                    _vm._v("Nomor HP")
+                  _c("label", { attrs: { for: "nama_kelas" } }, [
+                    _vm._v("Nama Kelas")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -665,68 +635,34 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.guruData.phone,
-                        expression: "guruData.phone"
+                        value: _vm.kelasData.nama_kelas,
+                        expression: "kelasData.nama_kelas"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "phone",
-                      placeholder: "Masukan Nomor HP Guru"
+                      id: "nama_kelas",
+                      placeholder: "Masukan Namak Kelas"
                     },
-                    domProps: { value: _vm.guruData.phone },
+                    domProps: { value: _vm.kelasData.nama_kelas },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(_vm.guruData, "phone", $event.target.value)
+                        _vm.$set(
+                          _vm.kelasData,
+                          "nama_kelas",
+                          $event.target.value
+                        )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.phone
+                  _vm.errors.nama_kelas
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.phone[0]))
-                      ])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "address" } }, [
-                    _vm._v("Alamat")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.guruData.address,
-                        expression: "guruData.address"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "address",
-                      placeholder: "Masukan Alamat Guru"
-                    },
-                    domProps: { value: _vm.guruData.address },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.guruData, "address", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.errors.address
-                    ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.address[0]))
+                        _vm._v(_vm._s(_vm.errors.nama_kelas[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -739,7 +675,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideNewGuruModal }
+                      on: { click: _vm.hideNewKelasModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -765,8 +701,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "editGuruModal",
-          attrs: { "hide-footer": "", title: "Ubah Data Guru" }
+          ref: "editKelasModal",
+          attrs: { "hide-footer": "", title: "Ubah Data Kelas" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -776,14 +712,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.updateGuru($event)
+                    return _vm.updateKelas($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "name" } }, [
-                    _vm._v("Nama Lengkap")
+                  _c("label", { attrs: { for: "tingkat" } }, [
+                    _vm._v("Tingkat")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -791,110 +727,76 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.editGuruData.name,
-                        expression: "editGuruData.name"
+                        value: _vm.editKelasData.tingkat,
+                        expression: "editKelasData.tingkat"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "name",
-                      placeholder: "Masukan Nama Guru"
+                      id: "tingkat",
+                      placeholder: "Masukan Tingkat"
                     },
-                    domProps: { value: _vm.editGuruData.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.editGuruData, "name", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.errors.name
-                    ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.name[0]))
-                      ])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "phone" } }, [
-                    _vm._v("Nomor HP")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.editGuruData.phone,
-                        expression: "editGuruData.phone"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "phone",
-                      placeholder: "Masukan Nomor HP Guru"
-                    },
-                    domProps: { value: _vm.editGuruData.phone },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.editGuruData, "phone", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.errors.phone
-                    ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.phone[0]))
-                      ])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "address" } }, [
-                    _vm._v("Alamat")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.editGuruData.address,
-                        expression: "editGuruData.address"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "address",
-                      placeholder: "Masukan Alamat Guru"
-                    },
-                    domProps: { value: _vm.editGuruData.address },
+                    domProps: { value: _vm.editKelasData.tingkat },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
                         _vm.$set(
-                          _vm.editGuruData,
-                          "address",
+                          _vm.editKelasData,
+                          "tingkat",
                           $event.target.value
                         )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.address
+                  _vm.errors.tingkat
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.address[0]))
+                        _vm._v(_vm._s(_vm.errors.tingkat[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nama_kelas" } }, [
+                    _vm._v("Nama Kelas")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editKelasData.nama_kelas,
+                        expression: "editKelasData.nama_kelas"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nama_kelas",
+                      placeholder: "Masukan Nama Kelas"
+                    },
+                    domProps: { value: _vm.editKelasData.nama_kelas },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.editKelasData,
+                          "nama_kelas",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nama_kelas
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nama_kelas[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -907,7 +809,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideEditGuruModal }
+                      on: { click: _vm.hideEditKelasModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -942,11 +844,9 @@ var staticRenderFns = [
       _c("tr", [
         _c("td", [_vm._v("#")]),
         _vm._v(" "),
+        _c("td", [_vm._v("Tingkat")]),
+        _vm._v(" "),
         _c("td", [_vm._v("Nama")]),
-        _vm._v(" "),
-        _c("td", [_vm._v("NOMOR HP")]),
-        _vm._v(" "),
-        _c("td", [_vm._v("ALAMAT")]),
         _vm._v(" "),
         _c("td", [_vm._v("AKSI")])
       ])
@@ -956,40 +856,6 @@ var staticRenderFns = [
 render._withStripped = true
 
 
-
-/***/ }),
-
-/***/ "./resources/js/services/guru_service.js":
-/*!***********************************************!*\
-  !*** ./resources/js/services/guru_service.js ***!
-  \***********************************************/
-/*! exports provided: createGuru, loadGurus, deleteGuru, updateGuru, loadMore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGuru", function() { return createGuru; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadGurus", function() { return loadGurus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteGuru", function() { return deleteGuru; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateGuru", function() { return updateGuru; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
-/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
-
-function createGuru(data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/guru', data);
-}
-function loadGurus() {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/guru');
-}
-function deleteGuru(id) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/guru/".concat(id));
-}
-function updateGuru(id, data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/guru/".concat(id), data);
-}
-function loadMore(nextPage) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/guru?page=".concat(nextPage));
-}
 
 /***/ }),
 
@@ -1025,17 +891,51 @@ function httpFile() {
 
 /***/ }),
 
-/***/ "./resources/js/views/Gurus.vue":
-/*!**************************************!*\
-  !*** ./resources/js/views/Gurus.vue ***!
-  \**************************************/
+/***/ "./resources/js/services/kelas_service.js":
+/*!************************************************!*\
+  !*** ./resources/js/services/kelas_service.js ***!
+  \************************************************/
+/*! exports provided: createKelas, loadKelass, deleteKelas, updateKelas, loadMore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createKelas", function() { return createKelas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadKelass", function() { return loadKelass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteKelas", function() { return deleteKelas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateKelas", function() { return updateKelas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
+/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
+
+function createKelas(data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/kela', data);
+}
+function loadKelass() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/kela');
+}
+function deleteKelas(id) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/kela/".concat(id));
+}
+function updateKelas(id, data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/kela/".concat(id), data);
+}
+function loadMore(nextPage) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/kela?page=".concat(nextPage));
+}
+
+/***/ }),
+
+/***/ "./resources/js/views/Kelass.vue":
+/*!***************************************!*\
+  !*** ./resources/js/views/Kelass.vue ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Gurus.vue?vue&type=template&id=10e9775a& */ "./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&");
-/* harmony import */ var _Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Gurus.vue?vue&type=script&lang=js& */ "./resources/js/views/Gurus.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Kelass.vue?vue&type=template&id=0db7e564& */ "./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564&");
+/* harmony import */ var _Kelass_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Kelass.vue?vue&type=script&lang=js& */ "./resources/js/views/Kelass.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1045,9 +945,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Kelass_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1057,38 +957,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/Gurus.vue"
+component.options.__file = "resources/js/views/Kelass.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/Gurus.vue?vue&type=script&lang=js&":
-/*!***************************************************************!*\
-  !*** ./resources/js/views/Gurus.vue?vue&type=script&lang=js& ***!
-  \***************************************************************/
+/***/ "./resources/js/views/Kelass.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./resources/js/views/Kelass.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Gurus.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kelass_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Kelass.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Kelass.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kelass_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&":
-/*!*********************************************************************!*\
-  !*** ./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a& ***!
-  \*********************************************************************/
+/***/ "./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564& ***!
+  \**********************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Gurus.vue?vue&type=template&id=10e9775a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Kelass.vue?vue&type=template&id=0db7e564& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Kelass.vue?vue&type=template&id=0db7e564&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kelass_vue_vue_type_template_id_0db7e564___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

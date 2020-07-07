@@ -62297,7 +62297,7 @@ var render = function() {
                   _c("div", { staticClass: "sb-nav-link-icon" }, [
                     _c("i", { staticClass: "fas fa-tachometer-alt" })
                   ]),
-                  _vm._v("\n                    Beranda\n                ")
+                  _vm._v("Beranda\n        ")
                 ]
               ),
               _vm._v(" "),
@@ -62328,11 +62328,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { to: "/guru", exact: "" }
                         },
-                        [
-                          _vm._v(
-                            "\n                            Guru\n                        "
-                          )
-                        ]
+                        [_vm._v("Guru")]
                       ),
                       _vm._v(" "),
                       _c(
@@ -62341,11 +62337,47 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { to: "/siswa", exact: "" }
                         },
-                        [
-                          _vm._v(
-                            "\n                            Siswa\n                        "
-                          )
-                        ]
+                        [_vm._v("Siswa")]
+                      )
+                    ],
+                    1
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "collapse",
+                  attrs: {
+                    id: "collapseLayouts",
+                    "aria-labelledby": "headingOne",
+                    "data-parent": "#sidenavAccordion"
+                  }
+                },
+                [
+                  _c(
+                    "nav",
+                    { staticClass: "sb-sidenav-menu-nested nav" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/mapel", exact: "" }
+                        },
+                        [_vm._v("Mata Pelajaran")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/kelas", exact: "" }
+                        },
+                        [_vm._v("Kelas")]
                       )
                     ],
                     1
@@ -62357,7 +62389,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _vm._m(1)
+        _vm._m(2)
       ]
     )
   ])
@@ -62383,7 +62415,34 @@ var staticRenderFns = [
         _c("div", { staticClass: "sb-nav-link-icon" }, [
           _c("i", { staticClass: "fas fa-columns" })
         ]),
-        _vm._v("\n                    Akun\n                    "),
+        _vm._v("Akun\n          "),
+        _c("div", { staticClass: "sb-sidenav-collapse-arrow" }, [
+          _c("i", { staticClass: "fas fa-angle-down" })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "nav-link collapsed",
+        attrs: {
+          href: "#",
+          "data-toggle": "collapse",
+          "data-target": "#collapseLayouts",
+          "aria-expanded": "false",
+          "aria-controls": "collapseLayouts"
+        }
+      },
+      [
+        _c("div", { staticClass: "sb-nav-link-icon" }, [
+          _c("i", { staticClass: "fas fa-columns" })
+        ]),
+        _vm._v("Akademik\n          "),
         _c("div", { staticClass: "sb-sidenav-collapse-arrow" }, [
           _c("i", { staticClass: "fas fa-angle-down" })
         ])
@@ -62396,7 +62455,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "sb-sidenav-footer" }, [
       _c("div", { staticClass: "small" }, [_vm._v("Logged in as:")]),
-      _vm._v("\n            Start Bootstrap\n        ")
+      _vm._v("Start Bootstrap\n    ")
     ])
   }
 ]
@@ -79317,6 +79376,18 @@ var routes = [{
   name: 'siswa',
   component: function component() {
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./views/Siswas.vue */ "./resources/js/views/Siswas.vue"));
+  }
+}, {
+  path: '/mapel',
+  name: 'mapel',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./views/Mapels.vue */ "./resources/js/views/Mapels.vue"));
+  }
+}, {
+  path: '/kelas',
+  name: 'kelas',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./views/Kelass.vue */ "./resources/js/views/Kelass.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

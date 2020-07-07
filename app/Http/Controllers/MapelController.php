@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Guru;
+use App\Mapel;
 use Illuminate\Http\Request;
 
-class GuruController extends Controller
+class MapelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $gurus = Guru::orderBy('created_at', 'desc')->paginate(5);
-        return response()->json($gurus, 200);
+        $mapels = Mapel::orderBy('created_at', 'desc')->paginate(5);
+        return response()->json($mapels, 200);
     }
 
     /**
@@ -37,18 +37,20 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:gurus',
-            'phone' => 'required',
-            'address' => 'required',
+            'kode_singkat' => 'required|unique:mapels',
+            'nama_mapel' => 'required',
+            'nilai_kkm' => 'required',
+            'kelompok' => 'required',
         ]);
 
-        $guru = new Guru();
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $mapel = new Mapel();
+        $mapel->kode_singkat = $request->kode_singkat;
+        $mapel->nama_mapel = $request->nama_mapel;
+        $mapel->nilai_kkm = $request->nilai_kkm;
+        $mapel->kelompok = $request->kelompok;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($mapel->save()) {
+            return response()->json($mapel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -60,10 +62,10 @@ class GuruController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function show(Guru $guru)
+    public function show(Mapel $mapel)
     {
         //
     }
@@ -71,10 +73,10 @@ class GuruController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Guru $guru)
+    public function edit(Mapel $mapel)
     {
         //
     }
@@ -83,23 +85,25 @@ class GuruController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Guru  $guru
+     * @param  \App\Mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Guru $guru)
+    public function update(Request $request, Mapel $mapel)
     {
         $request->validate([
-            'name' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
+            'kode_singkat' => 'required',
+            'nama_mapel' => 'required',
+            'nilai_kkm' => 'required',
+            'kelompok' => 'required',
         ]);
 
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $mapel->kode_singkat = $request->kode_singkat;
+        $mapel->nama_mapel = $request->nama_mapel;
+        $mapel->nilai_kkm = $request->nilai_kkm;
+        $mapel->kelompok = $request->kelompok;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($mapel->save()) {
+            return response()->json($mapel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -111,12 +115,12 @@ class GuruController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Guru $guru)
+    public function destroy(Mapel $mapel)
     {
-        if ($guru->delete()) {
+        if ($mapel->delete()) {
             return response()->json([
                 'message' => 'Berhasil Dihapus',
                 'status' => 200
