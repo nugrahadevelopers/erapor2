@@ -35,6 +35,17 @@ const routes = [{
         path: '/ekskul',
         name: 'ekskul',
         component: () => import('./views/Ekskuls.vue')
+    },
+    {
+        path: '/setkelas',
+        name: 'setkelas',
+        component: () => import('./views/SetKelas.vue')
+    },
+    {
+        path: '/setkelas/tambahsiswa',
+        name: 'tambahsiswa',
+        component: () => import('./views/AddSiswa.vue'),
+        props: true
     }
 ]
 

@@ -211,13 +211,19 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="name">Diterima Dikelas</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="diterima_dikelas"
-                        v-model="siswaData.diterima_dikelas"
-                        placeholder="Masukan Kelas"
-                      />
+                      <b-dropdown
+                        :text="siswaData.diterima_dikelas"
+                        split
+                        split-variant="outline-dark"
+                        v-model="dropKelas.dropValue"
+                      >
+                        <b-dropdown-item
+                          v-for="dropoption in dropKelas.dropOption"
+                          :key="dropoption.value"
+                          :value="dropoption.value"
+                          @click="siswaData.diterima_dikelas = dropoption.value, dropKelas.dropValue = dropoption.value"
+                        >{{dropoption.text}}</b-dropdown-item>
+                      </b-dropdown>
                       <div class="invalid-feedback"></div>
                     </div>
                   </div>
@@ -487,19 +493,25 @@
                 <div class="invalid-feedback"></div>
               </div>
             </div>
-            <div class="col">
-              <div class="form-group">
-                <label for="phone">Jenis Kelamin</label>
-                <b-dropdown split split-variant="outline" v-model="editSiswaData.jenis_kelamin">
-                  <b-dropdown-item
-                    v-for="dropoption in dropGender.dropOption"
-                    :key="dropoption.value"
-                    :value="dropoption.value"
-                    @click="editSiswaData.jenis_kelamin = dropoption.value, dropGender.dropValue = dropoption.value"
-                  >{{dropoption.text}}</b-dropdown-item>
-                </b-dropdown>
-                <p>{{ editSiswaData.jenis_kelamin }}</p>
-                <div class="invalid-feedback"></div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="name">Jenis Kelamin</label>
+                  <b-dropdown
+                    split
+                    split-variant="outline-dark"
+                    :text="editSiswaData.jenis_kelamin"
+                    v-model="editSiswaData.jenis_kelamin"
+                  >
+                    <b-dropdown-item
+                      v-for="dropoption in dropGender.dropOption"
+                      :key="dropoption.value"
+                      :value="dropoption.value"
+                      @click="editSiswaData.jenis_kelamin = dropoption.value, dropGender.dropValue = dropoption.value"
+                    >{{dropoption.text}}</b-dropdown-item>
+                  </b-dropdown>
+                  <div class="invalid-feedback"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -614,13 +626,19 @@
             <div class="col">
               <div class="form-group">
                 <label for="name">Diterima Dikelas</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="diterima_dikelas"
+                <b-dropdown
+                  split
+                  split-variant="outline-dark"
+                  :text="editSiswaData.diterima_dikelas"
                   v-model="editSiswaData.diterima_dikelas"
-                  placeholder="Masukan Kelas"
-                />
+                >
+                  <b-dropdown-item
+                    v-for="dropoption in dropKelas.dropOption"
+                    :key="dropoption.value"
+                    :value="dropoption.value"
+                    @click="editSiswaData.diterima_dikelas = dropoption.value, dropKelas.dropValue = dropoption.value"
+                  >{{dropoption.text}}</b-dropdown-item>
+                </b-dropdown>
                 <div class="invalid-feedback"></div>
               </div>
             </div>
@@ -894,6 +912,23 @@ export default {
           {
             value: "Wanita",
             text: "Wanita"
+          }
+        ]
+      },
+      dropKelas: {
+        dropValue: "10",
+        dropOption: [
+          {
+            value: "10",
+            text: "10"
+          },
+          {
+            value: "11",
+            text: "11"
+          },
+          {
+            value: "12",
+            text: "12"
           }
         ]
       },

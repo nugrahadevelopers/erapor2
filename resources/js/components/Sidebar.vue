@@ -62,6 +62,7 @@
               <router-link to="/mapel" class="nav-link" exact>Mata Pelajaran</router-link>
               <router-link to="/kelas" class="nav-link" exact>Kelas</router-link>
               <router-link to="/ekskul" class="nav-link" exact>Ekstrakulikuler</router-link>
+              <router-link to="/setkelas" class="nav-link" exact>Kelompok Kelas</router-link>
             </nav>
           </div>
         </div>

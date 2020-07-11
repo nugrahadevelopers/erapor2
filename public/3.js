@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Mapels.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Gurus.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/mapel_service */ "./resources/js/services/mapel_service.js");
+/* harmony import */ var _services_guru_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/guru_service */ "./resources/js/services/guru_service.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -173,58 +173,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "mapel",
+  name: "guru",
   data: function data() {
     return {
-      mapels: [],
-      mapelData: {
-        kode_singkat: "",
-        nama_mapel: "",
-        nilai_kkm: "",
-        kelompok: ""
+      gurus: [],
+      guruData: {
+        name: "",
+        phone: "",
+        address: ""
       },
       moreExists: false,
       nextPage: 0,
-      editMapelData: {},
+      editGuruData: {},
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadMapels();
+    this.loadGurus();
   },
   methods: {
-    hideNewMapelModal: function hideNewMapelModal() {
-      this.$refs.newMapelModal.hide();
+    hideNewGuruModal: function hideNewGuruModal() {
+      this.$refs.newGuruModal.hide();
     },
-    showNewMapelModal: function showNewMapelModal() {
-      this.$refs.newMapelModal.show();
+    showNewGuruModal: function showNewGuruModal() {
+      this.$refs.newGuruModal.show();
     },
-    loadMapels: function () {
-      var _loadMapels = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    loadGurus: function () {
+      var _loadGurus = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -232,11 +209,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["loadMapels"]();
+                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["loadGurus"]();
 
               case 3:
                 response = _context.sent;
-                this.mapels = response.data.data;
+                this.gurus = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
                   this.moreExists = true;
@@ -264,84 +241,82 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this, [[0, 8]]);
       }));
 
-      function loadMapels() {
-        return _loadMapels.apply(this, arguments);
+      function loadGurus() {
+        return _loadGurus.apply(this, arguments);
       }
 
-      return loadMapels;
+      return loadGurus;
     }(),
-    createMapel: function () {
-      var _createMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    createGuru: function () {
+      var _createGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 formData = new FormData();
-                formData.append("kode_singkat", this.mapelData.kode_singkat);
-                formData.append("nama_mapel", this.mapelData.nama_mapel);
-                formData.append("nilai_kkm", this.mapelData.nilai_kkm);
-                formData.append("kelompok", this.mapelData.kelompok);
-                _context2.prev = 5;
-                _context2.next = 8;
-                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["createMapel"](formData);
+                formData.append("name", this.guruData.name);
+                formData.append("phone", this.guruData.phone);
+                formData.append("address", this.guruData.address);
+                _context2.prev = 4;
+                _context2.next = 7;
+                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["createGuru"](formData);
 
-              case 8:
+              case 7:
                 response = _context2.sent;
-                this.mapels.unshift(response.data);
-                this.hideNewMapelModal();
+                this.gurus.unshift(response.data);
+                this.hideNewGuruModal();
                 this.flashMessage.success({
-                  message: "Data Mapel Berhasil Ditambahkan",
+                  message: "Data Guru Berhasil Ditambahkan",
                   time: 5000
                 });
-                this.mapelData = {
-                  kode_singkat: "",
-                  nama_mapel: "",
-                  nilai_kkm: "",
-                  kelompok: ""
+                this.guruData = {
+                  name: "",
+                  phone: "",
+                  address: ""
                 };
-                _context2.next = 24;
+                _context2.next = 23;
                 break;
 
-              case 15:
-                _context2.prev = 15;
-                _context2.t0 = _context2["catch"](5);
+              case 14:
+                _context2.prev = 14;
+                _context2.t0 = _context2["catch"](4);
                 _context2.t1 = _context2.t0.response.status;
-                _context2.next = _context2.t1 === 422 ? 20 : 22;
+                _context2.next = _context2.t1 === 422 ? 19 : 21;
                 break;
 
-              case 20:
+              case 19:
                 this.errors = _context2.t0.response.data.errors;
-                return _context2.abrupt("break", 24);
+                return _context2.abrupt("break", 23);
 
-              case 22:
+              case 21:
                 this.flashMessage.error({
                   message: "Terjadi masalah silahkan refresh halaman ini!",
                   time: 5000
                 });
-                return _context2.abrupt("break", 24);
+                return _context2.abrupt("break", 23);
 
-              case 24:
+              case 23:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[5, 15]]);
+        }, _callee2, this, [[4, 14]]);
       }));
 
-      function createMapel() {
-        return _createMapel.apply(this, arguments);
+      function createGuru() {
+        return _createGuru.apply(this, arguments);
       }
 
-      return createMapel;
+      return createGuru;
     }(),
-    deleteMapel: function () {
-      var _deleteMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(mapel) {
+    deleteGuru: function () {
+      var _deleteGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(guru) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                if (window.confirm("Anda Akan Menghapus ".concat(mapel.nama_mapel))) {
+                if (window.confirm("Anda Akan Menghapus ".concat(guru.name))) {
                   _context3.next = 2;
                   break;
                 }
@@ -351,14 +326,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["deleteMapel"](mapel.id);
+                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["deleteGuru"](guru.id);
 
               case 5:
-                this.mapels = this.mapels.filter(function (obj) {
-                  return obj.id != mapel.id;
+                this.gurus = this.gurus.filter(function (obj) {
+                  return obj.id != guru.id;
                 });
                 this.flashMessage.success({
-                  message: "Data Mapel Berhasil Dihapus",
+                  message: "Data Guru Berhasil Dihapus",
                   time: 5000
                 });
                 _context3.next = 12;
@@ -380,24 +355,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3, this, [[2, 9]]);
       }));
 
-      function deleteMapel(_x) {
-        return _deleteMapel.apply(this, arguments);
+      function deleteGuru(_x) {
+        return _deleteGuru.apply(this, arguments);
       }
 
-      return deleteMapel;
+      return deleteGuru;
     }(),
-    hideEditMapelModal: function hideEditMapelModal() {
-      this.$refs.editMapelModal.hide();
+    hideEditGuruModal: function hideEditGuruModal() {
+      this.$refs.editGuruModal.hide();
     },
-    showEditMapelModal: function showEditMapelModal() {
-      this.$refs.editMapelModal.show();
+    showEditGuruModal: function showEditGuruModal() {
+      this.$refs.editGuruModal.show();
     },
-    editMapel: function editMapel(mapel) {
-      this.editMapelData = _objectSpread({}, mapel);
-      this.showEditMapelModal();
+    editGuru: function editGuru(guru) {
+      this.editGuruData = _objectSpread({}, guru);
+      this.showEditGuruModal();
     },
-    updateMapel: function () {
-      var _updateMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    updateGuru: function () {
+      var _updateGuru = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -405,52 +380,51 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context4.prev = 0;
                 formData = new FormData();
-                formData.append("kode_singkat", this.editMapelData.kode_singkat);
-                formData.append("nama_mapel", this.editMapelData.nama_mapel);
-                formData.append("nilai_kkm", this.editMapelData.nilai_kkm);
-                formData.append("kelompok", this.editMapelData.kelompok);
+                formData.append("name", this.editGuruData.name);
+                formData.append("phone", this.editGuruData.phone);
+                formData.append("address", this.editGuruData.address);
                 formData.append("_method", "put");
-                _context4.next = 9;
-                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["updateMapel"](this.editMapelData.id, formData);
+                _context4.next = 8;
+                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["updateGuru"](this.editGuruData.id, formData);
 
-              case 9:
+              case 8:
                 response = _context4.sent;
-                this.mapels.map(function (mapel) {
-                  if (mapel.id == response.data.id) {
+                this.gurus.map(function (guru) {
+                  if (guru.id == response.data.id) {
                     for (var key in response.data) {
-                      mapel[key] = response.data[key];
+                      guru[key] = response.data[key];
                     }
                   }
                 });
-                this.hideEditMapelModal();
+                this.hideEditGuruModal();
                 this.flashMessage.success({
-                  message: "Data Mapel Berhasil Diubah",
+                  message: "Data Guru Berhasil Diubah",
                   time: 5000
                 });
-                _context4.next = 18;
+                _context4.next = 17;
                 break;
 
-              case 15:
-                _context4.prev = 15;
+              case 14:
+                _context4.prev = 14;
                 _context4.t0 = _context4["catch"](0);
                 this.flashMessage.error({
                   message: _context4.t0.response.data.message,
                   time: 5000
                 });
 
-              case 18:
+              case 17:
               case "end":
                 return _context4.stop();
             }
           }
-        }, _callee4, this, [[0, 15]]);
+        }, _callee4, this, [[0, 14]]);
       }));
 
-      function updateMapel() {
-        return _updateMapel.apply(this, arguments);
+      function updateGuru() {
+        return _updateGuru.apply(this, arguments);
       }
 
-      return updateMapel;
+      return updateGuru;
     }(),
     loadMore: function () {
       var _loadMore = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
@@ -463,7 +437,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context5.prev = 0;
                 _context5.next = 3;
-                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
+                return _services_guru_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
 
               case 3:
                 response = _context5.sent;
@@ -476,7 +450,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.mapels.push(data);
+                  _this.gurus.push(data);
                 });
                 _context5.next = 11;
                 break;
@@ -508,10 +482,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2& ***!
-  \****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a& ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -530,16 +504,16 @@ var render = function() {
       _c("div", { staticClass: "card mb-4 mt-5" }, [
         _c("div", { staticClass: "card-header d-flex" }, [
           _c("i", { staticClass: "fas fa-chart-area mr-1" }),
-          _vm._v("\n      Data Mata Pelajaran\n      "),
+          _vm._v("\n      Data Guru\n      "),
           _c(
             "button",
             {
               staticClass: "btn btn-primary btn-sm ml-auto",
-              on: { click: _vm.showNewMapelModal }
+              on: { click: _vm.showNewGuruModal }
             },
             [
               _c("span", { staticClass: "fa fa-plus" }),
-              _vm._v(" Tambah Mapel\n      ")
+              _vm._v(" Tambah Guru\n      ")
             ]
           )
         ]),
@@ -550,15 +524,15 @@ var render = function() {
             _vm._v(" "),
             _c(
               "tbody",
-              _vm._l(_vm.mapels, function(mapel, index) {
+              _vm._l(_vm.gurus, function(guru, index) {
                 return _c("tr", { key: index }, [
                   _c("td", [_vm._v(_vm._s(index + 1))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(mapel.kelompok))]),
+                  _c("td", [_vm._v(_vm._s(guru.name))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(mapel.nilai_kkm))]),
+                  _c("td", [_vm._v(_vm._s(guru.phone))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(mapel.nama_mapel))]),
+                  _c("td", [_vm._v(_vm._s(guru.address))]),
                   _vm._v(" "),
                   _c("td", [
                     _c(
@@ -567,7 +541,7 @@ var render = function() {
                         staticClass: "btn btn-primary btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.editMapel(mapel)
+                            return _vm.editGuru(guru)
                           }
                         }
                       },
@@ -580,7 +554,7 @@ var render = function() {
                         staticClass: "btn btn-danger btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.deleteMapel(mapel)
+                            return _vm.deleteGuru(guru)
                           }
                         }
                       },
@@ -627,8 +601,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "newMapelModal",
-          attrs: { "hide-footer": "", title: "Tambah Mata Pelajaran" }
+          ref: "newGuruModal",
+          attrs: { "hide-footer": "", title: "Tambah Data Guru" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -638,14 +612,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.createMapel($event)
+                    return _vm.createGuru($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "kode_singkat" } }, [
-                    _vm._v("Kode Mapel")
+                  _c("label", { attrs: { for: "name" } }, [
+                    _vm._v("Nama Lengkap")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -653,41 +627,37 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.mapelData.kode_singkat,
-                        expression: "mapelData.kode_singkat"
+                        value: _vm.guruData.name,
+                        expression: "guruData.name"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "kode_singkat",
-                      placeholder: "Masukan Kode Mapel"
+                      id: "name",
+                      placeholder: "Masukan Nama Guru"
                     },
-                    domProps: { value: _vm.mapelData.kode_singkat },
+                    domProps: { value: _vm.guruData.name },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(
-                          _vm.mapelData,
-                          "kode_singkat",
-                          $event.target.value
-                        )
+                        _vm.$set(_vm.guruData, "name", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.kode_singkat
+                  _vm.errors.name
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.kode_singkat[0]))
+                        _vm._v(_vm._s(_vm.errors.name[0]))
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nama_mapel" } }, [
-                    _vm._v("Nama Mata Pelajaran")
+                  _c("label", { attrs: { for: "phone" } }, [
+                    _vm._v("Nomor HP")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -695,41 +665,37 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.mapelData.nama_mapel,
-                        expression: "mapelData.nama_mapel"
+                        value: _vm.guruData.phone,
+                        expression: "guruData.phone"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nama_mapel",
-                      placeholder: "Masukan Nama Mata Pelajaran"
+                      id: "phone",
+                      placeholder: "Masukan Nomor HP Guru"
                     },
-                    domProps: { value: _vm.mapelData.nama_mapel },
+                    domProps: { value: _vm.guruData.phone },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(
-                          _vm.mapelData,
-                          "nama_mapel",
-                          $event.target.value
-                        )
+                        _vm.$set(_vm.guruData, "phone", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nama_mapel
+                  _vm.errors.phone
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nama_mapel[0]))
+                        _vm._v(_vm._s(_vm.errors.phone[0]))
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nilai_kkm" } }, [
-                    _vm._v("Nilain KKM")
+                  _c("label", { attrs: { for: "address" } }, [
+                    _vm._v("Alamat")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -737,72 +703,30 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.mapelData.nilai_kkm,
-                        expression: "mapelData.nilai_kkm"
+                        value: _vm.guruData.address,
+                        expression: "guruData.address"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nilai_kkm",
-                      placeholder: "Masukan Nilai KKM"
+                      id: "address",
+                      placeholder: "Masukan Alamat Guru"
                     },
-                    domProps: { value: _vm.mapelData.nilai_kkm },
+                    domProps: { value: _vm.guruData.address },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(
-                          _vm.mapelData,
-                          "nilai_kkm",
-                          $event.target.value
-                        )
+                        _vm.$set(_vm.guruData, "address", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nilai_kkm
+                  _vm.errors.address
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nilai_kkm[0]))
-                      ])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "kelompok" } }, [
-                    _vm._v("Kelompok")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.mapelData.kelompok,
-                        expression: "mapelData.kelompok"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "kelompok",
-                      placeholder: "Kelompok"
-                    },
-                    domProps: { value: _vm.mapelData.kelompok },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.mapelData, "kelompok", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.errors.kelompok
-                    ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.kelompok[0]))
+                        _vm._v(_vm._s(_vm.errors.address[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -815,7 +739,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideNewMapelModal }
+                      on: { click: _vm.hideNewGuruModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -841,8 +765,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "editMapelModal",
-          attrs: { "hide-footer": "", title: "Ubah Data Mapel" }
+          ref: "editGuruModal",
+          attrs: { "hide-footer": "", title: "Ubah Data Guru" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -852,14 +776,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.updateMapel($event)
+                    return _vm.updateGuru($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "kode_singkat" } }, [
-                    _vm._v("Kode Mapel")
+                  _c("label", { attrs: { for: "name" } }, [
+                    _vm._v("Nama Lengkap")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -867,41 +791,37 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.editMapelData.kode_singkat,
-                        expression: "editMapelData.kode_singkat"
+                        value: _vm.editGuruData.name,
+                        expression: "editGuruData.name"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "kode_singkat",
-                      placeholder: "Masukan Kode Mapel"
+                      id: "name",
+                      placeholder: "Masukan Nama Guru"
                     },
-                    domProps: { value: _vm.editMapelData.kode_singkat },
+                    domProps: { value: _vm.editGuruData.name },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(
-                          _vm.editMapelData,
-                          "kode_singkat",
-                          $event.target.value
-                        )
+                        _vm.$set(_vm.editGuruData, "name", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.kode_singkat
+                  _vm.errors.name
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.kode_singkat[0]))
+                        _vm._v(_vm._s(_vm.errors.name[0]))
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nama_mapel" } }, [
-                    _vm._v("Nama Mata Pelajaran")
+                  _c("label", { attrs: { for: "phone" } }, [
+                    _vm._v("Nomor HP")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -909,41 +829,37 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.editMapelData.nama_mapel,
-                        expression: "editMapelData.nama_mapel"
+                        value: _vm.editGuruData.phone,
+                        expression: "editGuruData.phone"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nama_mapel",
-                      placeholder: "Masukan Nama Mata Pelajaran"
+                      id: "phone",
+                      placeholder: "Masukan Nomor HP Guru"
                     },
-                    domProps: { value: _vm.editMapelData.nama_mapel },
+                    domProps: { value: _vm.editGuruData.phone },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(
-                          _vm.editMapelData,
-                          "nama_mapel",
-                          $event.target.value
-                        )
+                        _vm.$set(_vm.editGuruData, "phone", $event.target.value)
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nama_mapel
+                  _vm.errors.phone
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nama_mapel[0]))
+                        _vm._v(_vm._s(_vm.errors.phone[0]))
                       ])
                     : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nilai_kkm" } }, [
-                    _vm._v("Nilain KKM")
+                  _c("label", { attrs: { for: "address" } }, [
+                    _vm._v("Alamat")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -951,76 +867,34 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.editMapelData.nilai_kkm,
-                        expression: "editMapelData.nilai_kkm"
+                        value: _vm.editGuruData.address,
+                        expression: "editGuruData.address"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nilai_kkm",
-                      placeholder: "Masukan Nilai KKM"
+                      id: "address",
+                      placeholder: "Masukan Alamat Guru"
                     },
-                    domProps: { value: _vm.editMapelData.nilai_kkm },
+                    domProps: { value: _vm.editGuruData.address },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
                         _vm.$set(
-                          _vm.editMapelData,
-                          "nilai_kkm",
+                          _vm.editGuruData,
+                          "address",
                           $event.target.value
                         )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nilai_kkm
+                  _vm.errors.address
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nilai_kkm[0]))
-                      ])
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "kelompok" } }, [
-                    _vm._v("Kelompok")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.editMapelData.kelompok,
-                        expression: "editMapelData.kelompok"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "kelompok",
-                      placeholder: "Kelompok"
-                    },
-                    domProps: { value: _vm.editMapelData.kelompok },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(
-                          _vm.editMapelData,
-                          "kelompok",
-                          $event.target.value
-                        )
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _vm.errors.kelompok
-                    ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.kelompok[0]))
+                        _vm._v(_vm._s(_vm.errors.address[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -1033,7 +907,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideEditMapelModal }
+                      on: { click: _vm.hideEditGuruModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -1068,11 +942,11 @@ var staticRenderFns = [
       _c("tr", [
         _c("td", [_vm._v("#")]),
         _vm._v(" "),
-        _c("td", [_vm._v("Kelompok")]),
-        _vm._v(" "),
-        _c("td", [_vm._v("KKM")]),
-        _vm._v(" "),
         _c("td", [_vm._v("Nama")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("NOMOR HP")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("ALAMAT")]),
         _vm._v(" "),
         _c("td", [_vm._v("AKSI")])
       ])
@@ -1082,6 +956,40 @@ var staticRenderFns = [
 render._withStripped = true
 
 
+
+/***/ }),
+
+/***/ "./resources/js/services/guru_service.js":
+/*!***********************************************!*\
+  !*** ./resources/js/services/guru_service.js ***!
+  \***********************************************/
+/*! exports provided: createGuru, loadGurus, deleteGuru, updateGuru, loadMore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGuru", function() { return createGuru; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadGurus", function() { return loadGurus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteGuru", function() { return deleteGuru; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateGuru", function() { return updateGuru; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
+/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
+
+function createGuru(data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/guru', data);
+}
+function loadGurus() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/guru');
+}
+function deleteGuru(id) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/guru/".concat(id));
+}
+function updateGuru(id, data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/guru/".concat(id), data);
+}
+function loadMore(nextPage) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/guru?page=".concat(nextPage));
+}
 
 /***/ }),
 
@@ -1117,51 +1025,17 @@ function httpFile() {
 
 /***/ }),
 
-/***/ "./resources/js/services/mapel_service.js":
-/*!************************************************!*\
-  !*** ./resources/js/services/mapel_service.js ***!
-  \************************************************/
-/*! exports provided: createMapel, loadMapels, deleteMapel, updateMapel, loadMore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMapel", function() { return createMapel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMapels", function() { return loadMapels; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteMapel", function() { return deleteMapel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateMapel", function() { return updateMapel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
-/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
-
-function createMapel(data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/mapel', data);
-}
-function loadMapels() {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/mapel');
-}
-function deleteMapel(id) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/mapel/".concat(id));
-}
-function updateMapel(id, data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/mapel/".concat(id), data);
-}
-function loadMore(nextPage) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/mapel?page=".concat(nextPage));
-}
-
-/***/ }),
-
-/***/ "./resources/js/views/Mapels.vue":
-/*!***************************************!*\
-  !*** ./resources/js/views/Mapels.vue ***!
-  \***************************************/
+/***/ "./resources/js/views/Gurus.vue":
+/*!**************************************!*\
+  !*** ./resources/js/views/Gurus.vue ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mapels.vue?vue&type=template&id=105e30a2& */ "./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&");
-/* harmony import */ var _Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Mapels.vue?vue&type=script&lang=js& */ "./resources/js/views/Mapels.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Gurus.vue?vue&type=template&id=10e9775a& */ "./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&");
+/* harmony import */ var _Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Gurus.vue?vue&type=script&lang=js& */ "./resources/js/views/Gurus.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1171,9 +1045,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1183,38 +1057,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/Mapels.vue"
+component.options.__file = "resources/js/views/Gurus.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/Mapels.vue?vue&type=script&lang=js&":
-/*!****************************************************************!*\
-  !*** ./resources/js/views/Mapels.vue?vue&type=script&lang=js& ***!
-  \****************************************************************/
+/***/ "./resources/js/views/Gurus.vue?vue&type=script&lang=js&":
+/*!***************************************************************!*\
+  !*** ./resources/js/views/Gurus.vue?vue&type=script&lang=js& ***!
+  \***************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Mapels.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Gurus.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2& ***!
-  \**********************************************************************/
+/***/ "./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a& ***!
+  \*********************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Mapels.vue?vue&type=template&id=105e30a2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Gurus.vue?vue&type=template&id=10e9775a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Gurus.vue?vue&type=template&id=10e9775a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Gurus_vue_vue_type_template_id_10e9775a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

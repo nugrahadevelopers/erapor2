@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Mapels.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/ekskul_service */ "./resources/js/services/ekskul_service.js");
+/* harmony import */ var _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/mapel_service */ "./resources/js/services/mapel_service.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -125,33 +125,106 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ekskul",
+  name: "mapel",
   data: function data() {
     return {
-      ekskuls: [],
-      ekskulData: {
-        nama_ekskul: ""
+      mapels: [],
+      mapelData: {
+        kode_singkat: "",
+        nama_mapel: "",
+        nilai_kkm: "",
+        kelompok: ""
       },
       moreExists: false,
       nextPage: 0,
-      editEkskulData: {},
+      editMapelData: {},
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadEkskuls();
+    this.loadMapels();
   },
   methods: {
-    hideNewEkskulModal: function hideNewEkskulModal() {
-      this.$refs.newEkskulModal.hide();
+    hideNewMapelModal: function hideNewMapelModal() {
+      this.$refs.newMapelModal.hide();
     },
-    showNewEkskulModal: function showNewEkskulModal() {
-      this.$refs.newEkskulModal.show();
+    showNewMapelModal: function showNewMapelModal() {
+      this.$refs.newMapelModal.show();
     },
-    loadEkskuls: function () {
-      var _loadEkskuls = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    loadMapels: function () {
+      var _loadMapels = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -159,11 +232,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["loadEkskuls"]();
+                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["loadMapels"]();
 
               case 3:
                 response = _context.sent;
-                this.ekskuls = response.data.data;
+                this.mapels = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
                   this.moreExists = true;
@@ -191,78 +264,84 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this, [[0, 8]]);
       }));
 
-      function loadEkskuls() {
-        return _loadEkskuls.apply(this, arguments);
+      function loadMapels() {
+        return _loadMapels.apply(this, arguments);
       }
 
-      return loadEkskuls;
+      return loadMapels;
     }(),
-    createEkskul: function () {
-      var _createEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    createMapel: function () {
+      var _createMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 formData = new FormData();
-                formData.append("nama_ekskul", this.ekskulData.nama_ekskul);
-                _context2.prev = 2;
-                _context2.next = 5;
-                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["createEkskul"](formData);
+                formData.append("kode_singkat", this.mapelData.kode_singkat);
+                formData.append("nama_mapel", this.mapelData.nama_mapel);
+                formData.append("nilai_kkm", this.mapelData.nilai_kkm);
+                formData.append("kelompok", this.mapelData.kelompok);
+                _context2.prev = 5;
+                _context2.next = 8;
+                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["createMapel"](formData);
 
-              case 5:
+              case 8:
                 response = _context2.sent;
-                this.ekskuls.unshift(response.data);
-                this.hideNewEkskulModal();
+                this.mapels.unshift(response.data);
+                this.hideNewMapelModal();
                 this.flashMessage.success({
-                  message: "Data Ekskul Berhasil Ditambahkan",
+                  message: "Data Mapel Berhasil Ditambahkan",
                   time: 5000
                 });
-                this.ekskulData = {
-                  nama_ekskul: ""
+                this.mapelData = {
+                  kode_singkat: "",
+                  nama_mapel: "",
+                  nilai_kkm: "",
+                  kelompok: ""
                 };
-                _context2.next = 21;
+                _context2.next = 24;
                 break;
 
-              case 12:
-                _context2.prev = 12;
-                _context2.t0 = _context2["catch"](2);
+              case 15:
+                _context2.prev = 15;
+                _context2.t0 = _context2["catch"](5);
                 _context2.t1 = _context2.t0.response.status;
-                _context2.next = _context2.t1 === 422 ? 17 : 19;
+                _context2.next = _context2.t1 === 422 ? 20 : 22;
                 break;
 
-              case 17:
+              case 20:
                 this.errors = _context2.t0.response.data.errors;
-                return _context2.abrupt("break", 21);
+                return _context2.abrupt("break", 24);
 
-              case 19:
+              case 22:
                 this.flashMessage.error({
                   message: "Terjadi masalah silahkan refresh halaman ini!",
                   time: 5000
                 });
-                return _context2.abrupt("break", 21);
+                return _context2.abrupt("break", 24);
 
-              case 21:
+              case 24:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[2, 12]]);
+        }, _callee2, this, [[5, 15]]);
       }));
 
-      function createEkskul() {
-        return _createEkskul.apply(this, arguments);
+      function createMapel() {
+        return _createMapel.apply(this, arguments);
       }
 
-      return createEkskul;
+      return createMapel;
     }(),
-    deleteEkskul: function () {
-      var _deleteEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(ekskul) {
+    deleteMapel: function () {
+      var _deleteMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(mapel) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                if (window.confirm("Anda Akan Menghapus ".concat(ekskul.nama_ekskul))) {
+                if (window.confirm("Anda Akan Menghapus ".concat(mapel.nama_mapel))) {
                   _context3.next = 2;
                   break;
                 }
@@ -272,14 +351,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["deleteEkskul"](ekskul.id);
+                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["deleteMapel"](mapel.id);
 
               case 5:
-                this.ekskuls = this.ekskuls.filter(function (obj) {
-                  return obj.id != ekskul.id;
+                this.mapels = this.mapels.filter(function (obj) {
+                  return obj.id != mapel.id;
                 });
                 this.flashMessage.success({
-                  message: "Data Ekskul Berhasil Dihapus",
+                  message: "Data Mapel Berhasil Dihapus",
                   time: 5000
                 });
                 _context3.next = 12;
@@ -301,24 +380,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3, this, [[2, 9]]);
       }));
 
-      function deleteEkskul(_x) {
-        return _deleteEkskul.apply(this, arguments);
+      function deleteMapel(_x) {
+        return _deleteMapel.apply(this, arguments);
       }
 
-      return deleteEkskul;
+      return deleteMapel;
     }(),
-    hideEditEkskulModal: function hideEditEkskulModal() {
-      this.$refs.editEkskulModal.hide();
+    hideEditMapelModal: function hideEditMapelModal() {
+      this.$refs.editMapelModal.hide();
     },
-    showEditEkskulModal: function showEditEkskulModal() {
-      this.$refs.editEkskulModal.show();
+    showEditMapelModal: function showEditMapelModal() {
+      this.$refs.editMapelModal.show();
     },
-    editEkskul: function editEkskul(ekskul) {
-      this.editEkskulData = _objectSpread({}, ekskul);
-      this.showEditEkskulModal();
+    editMapel: function editMapel(mapel) {
+      this.editMapelData = _objectSpread({}, mapel);
+      this.showEditMapelModal();
     },
-    updateEkskul: function () {
-      var _updateEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    updateMapel: function () {
+      var _updateMapel = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -326,49 +405,52 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context4.prev = 0;
                 formData = new FormData();
-                formData.append("nama_ekskul", this.editEkskulData.nama_ekskul);
+                formData.append("kode_singkat", this.editMapelData.kode_singkat);
+                formData.append("nama_mapel", this.editMapelData.nama_mapel);
+                formData.append("nilai_kkm", this.editMapelData.nilai_kkm);
+                formData.append("kelompok", this.editMapelData.kelompok);
                 formData.append("_method", "put");
-                _context4.next = 6;
-                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["updateEkskul"](this.editEkskulData.id, formData);
+                _context4.next = 9;
+                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["updateMapel"](this.editMapelData.id, formData);
 
-              case 6:
+              case 9:
                 response = _context4.sent;
-                this.ekskuls.map(function (ekskul) {
-                  if (ekskul.id == response.data.id) {
+                this.mapels.map(function (mapel) {
+                  if (mapel.id == response.data.id) {
                     for (var key in response.data) {
-                      ekskul[key] = response.data[key];
+                      mapel[key] = response.data[key];
                     }
                   }
                 });
-                this.hideEditEkskulModal();
+                this.hideEditMapelModal();
                 this.flashMessage.success({
-                  message: "Data Ekskul Berhasil Diubah",
+                  message: "Data Mapel Berhasil Diubah",
                   time: 5000
                 });
-                _context4.next = 15;
+                _context4.next = 18;
                 break;
 
-              case 12:
-                _context4.prev = 12;
+              case 15:
+                _context4.prev = 15;
                 _context4.t0 = _context4["catch"](0);
                 this.flashMessage.error({
                   message: _context4.t0.response.data.message,
                   time: 5000
                 });
 
-              case 15:
+              case 18:
               case "end":
                 return _context4.stop();
             }
           }
-        }, _callee4, this, [[0, 12]]);
+        }, _callee4, this, [[0, 15]]);
       }));
 
-      function updateEkskul() {
-        return _updateEkskul.apply(this, arguments);
+      function updateMapel() {
+        return _updateMapel.apply(this, arguments);
       }
 
-      return updateEkskul;
+      return updateMapel;
     }(),
     loadMore: function () {
       var _loadMore = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
@@ -381,7 +463,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context5.prev = 0;
                 _context5.next = 3;
-                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
+                return _services_mapel_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
 
               case 3:
                 response = _context5.sent;
@@ -394,7 +476,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.ekskuls.push(data);
+                  _this.mapels.push(data);
                 });
                 _context5.next = 11;
                 break;
@@ -426,10 +508,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2& ***!
-  \*****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2& ***!
+  \****************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -448,16 +530,16 @@ var render = function() {
       _c("div", { staticClass: "card mb-4 mt-5" }, [
         _c("div", { staticClass: "card-header d-flex" }, [
           _c("i", { staticClass: "fas fa-chart-area mr-1" }),
-          _vm._v("\n      Data Ekstrakulikuler\n      "),
+          _vm._v("\n      Data Mata Pelajaran\n      "),
           _c(
             "button",
             {
               staticClass: "btn btn-primary btn-sm ml-auto",
-              on: { click: _vm.showNewEkskulModal }
+              on: { click: _vm.showNewMapelModal }
             },
             [
               _c("span", { staticClass: "fa fa-plus" }),
-              _vm._v(" Tambah Ekskul\n      ")
+              _vm._v(" Tambah Mapel\n      ")
             ]
           )
         ]),
@@ -468,11 +550,15 @@ var render = function() {
             _vm._v(" "),
             _c(
               "tbody",
-              _vm._l(_vm.ekskuls, function(ekskul, index) {
+              _vm._l(_vm.mapels, function(mapel, index) {
                 return _c("tr", { key: index }, [
                   _c("td", [_vm._v(_vm._s(index + 1))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(ekskul.nama_ekskul))]),
+                  _c("td", [_vm._v(_vm._s(mapel.kelompok))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(mapel.nilai_kkm))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(mapel.nama_mapel))]),
                   _vm._v(" "),
                   _c("td", [
                     _c(
@@ -481,7 +567,7 @@ var render = function() {
                         staticClass: "btn btn-primary btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.editEkskul(ekskul)
+                            return _vm.editMapel(mapel)
                           }
                         }
                       },
@@ -494,7 +580,7 @@ var render = function() {
                         staticClass: "btn btn-danger btn-sm",
                         on: {
                           click: function($event) {
-                            return _vm.deleteEkskul(ekskul)
+                            return _vm.deleteMapel(mapel)
                           }
                         }
                       },
@@ -541,8 +627,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "newEkskulModal",
-          attrs: { "hide-footer": "", title: "Tambah Data Ekskul" }
+          ref: "newMapelModal",
+          attrs: { "hide-footer": "", title: "Tambah Mata Pelajaran" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -552,14 +638,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.createEkskul($event)
+                    return _vm.createMapel($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nama_ekskul" } }, [
-                    _vm._v("Nama")
+                  _c("label", { attrs: { for: "kode_singkat" } }, [
+                    _vm._v("Kode Mapel")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -567,34 +653,156 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.ekskulData.nama_ekskul,
-                        expression: "ekskulData.nama_ekskul"
+                        value: _vm.mapelData.kode_singkat,
+                        expression: "mapelData.kode_singkat"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nama_ekskul",
-                      placeholder: "Masukan Nama Ekskul"
+                      id: "kode_singkat",
+                      placeholder: "Masukan Kode Mapel"
                     },
-                    domProps: { value: _vm.ekskulData.nama_ekskul },
+                    domProps: { value: _vm.mapelData.kode_singkat },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
                         _vm.$set(
-                          _vm.ekskulData,
-                          "nama_ekskul",
+                          _vm.mapelData,
+                          "kode_singkat",
                           $event.target.value
                         )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nama_ekskul
+                  _vm.errors.kode_singkat
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nama_ekskul[0]))
+                        _vm._v(_vm._s(_vm.errors.kode_singkat[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nama_mapel" } }, [
+                    _vm._v("Nama Mata Pelajaran")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.mapelData.nama_mapel,
+                        expression: "mapelData.nama_mapel"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nama_mapel",
+                      placeholder: "Masukan Nama Mata Pelajaran"
+                    },
+                    domProps: { value: _vm.mapelData.nama_mapel },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.mapelData,
+                          "nama_mapel",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nama_mapel
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nama_mapel[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nilai_kkm" } }, [
+                    _vm._v("Nilain KKM")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.mapelData.nilai_kkm,
+                        expression: "mapelData.nilai_kkm"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nilai_kkm",
+                      placeholder: "Masukan Nilai KKM"
+                    },
+                    domProps: { value: _vm.mapelData.nilai_kkm },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.mapelData,
+                          "nilai_kkm",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nilai_kkm
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nilai_kkm[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "kelompok" } }, [
+                    _vm._v("Kelompok")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.mapelData.kelompok,
+                        expression: "mapelData.kelompok"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "kelompok",
+                      placeholder: "Kelompok"
+                    },
+                    domProps: { value: _vm.mapelData.kelompok },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.mapelData, "kelompok", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.kelompok
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.kelompok[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -607,7 +815,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideNewEkskulModal }
+                      on: { click: _vm.hideNewMapelModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -633,8 +841,8 @@ var render = function() {
       _c(
         "b-modal",
         {
-          ref: "editEkskulModal",
-          attrs: { "hide-footer": "", title: "Ubah Data Ekskul" }
+          ref: "editMapelModal",
+          attrs: { "hide-footer": "", title: "Ubah Data Mapel" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -644,14 +852,14 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.updateEkskul($event)
+                    return _vm.updateMapel($event)
                   }
                 }
               },
               [
                 _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "nama_ekskul" } }, [
-                    _vm._v("Nama")
+                  _c("label", { attrs: { for: "kode_singkat" } }, [
+                    _vm._v("Kode Mapel")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -659,34 +867,160 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.editEkskulData.nama_ekskul,
-                        expression: "editEkskulData.nama_ekskul"
+                        value: _vm.editMapelData.kode_singkat,
+                        expression: "editMapelData.kode_singkat"
                       }
                     ],
                     staticClass: "form-control",
                     attrs: {
                       type: "text",
-                      id: "nama_ekskul",
-                      placeholder: "Masukan Nama Ekskul"
+                      id: "kode_singkat",
+                      placeholder: "Masukan Kode Mapel"
                     },
-                    domProps: { value: _vm.editEkskulData.nama_ekskul },
+                    domProps: { value: _vm.editMapelData.kode_singkat },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
                         _vm.$set(
-                          _vm.editEkskulData,
-                          "nama_ekskul",
+                          _vm.editMapelData,
+                          "kode_singkat",
                           $event.target.value
                         )
                       }
                     }
                   }),
                   _vm._v(" "),
-                  _vm.errors.nama_ekskul
+                  _vm.errors.kode_singkat
                     ? _c("div", { staticClass: "invalid-feedback" }, [
-                        _vm._v(_vm._s(_vm.errors.nama_ekskul[0]))
+                        _vm._v(_vm._s(_vm.errors.kode_singkat[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nama_mapel" } }, [
+                    _vm._v("Nama Mata Pelajaran")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editMapelData.nama_mapel,
+                        expression: "editMapelData.nama_mapel"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nama_mapel",
+                      placeholder: "Masukan Nama Mata Pelajaran"
+                    },
+                    domProps: { value: _vm.editMapelData.nama_mapel },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.editMapelData,
+                          "nama_mapel",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nama_mapel
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nama_mapel[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nilai_kkm" } }, [
+                    _vm._v("Nilain KKM")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editMapelData.nilai_kkm,
+                        expression: "editMapelData.nilai_kkm"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nilai_kkm",
+                      placeholder: "Masukan Nilai KKM"
+                    },
+                    domProps: { value: _vm.editMapelData.nilai_kkm },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.editMapelData,
+                          "nilai_kkm",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nilai_kkm
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nilai_kkm[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "kelompok" } }, [
+                    _vm._v("Kelompok")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editMapelData.kelompok,
+                        expression: "editMapelData.kelompok"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "kelompok",
+                      placeholder: "Kelompok"
+                    },
+                    domProps: { value: _vm.editMapelData.kelompok },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.editMapelData,
+                          "kelompok",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.kelompok
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.kelompok[0]))
                       ])
                     : _vm._e()
                 ]),
@@ -699,7 +1033,7 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideEditEkskulModal }
+                      on: { click: _vm.hideEditMapelModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -734,6 +1068,10 @@ var staticRenderFns = [
       _c("tr", [
         _c("td", [_vm._v("#")]),
         _vm._v(" "),
+        _c("td", [_vm._v("Kelompok")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("KKM")]),
+        _vm._v(" "),
         _c("td", [_vm._v("Nama")]),
         _vm._v(" "),
         _c("td", [_vm._v("AKSI")])
@@ -744,40 +1082,6 @@ var staticRenderFns = [
 render._withStripped = true
 
 
-
-/***/ }),
-
-/***/ "./resources/js/services/ekskul_service.js":
-/*!*************************************************!*\
-  !*** ./resources/js/services/ekskul_service.js ***!
-  \*************************************************/
-/*! exports provided: createEkskul, loadEkskuls, deleteEkskul, updateEkskul, loadMore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEkskul", function() { return createEkskul; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadEkskuls", function() { return loadEkskuls; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEkskul", function() { return deleteEkskul; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateEkskul", function() { return updateEkskul; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
-/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
-
-function createEkskul(data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/ekskul', data);
-}
-function loadEkskuls() {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/ekskul');
-}
-function deleteEkskul(id) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/ekskul/".concat(id));
-}
-function updateEkskul(id, data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/ekskul/".concat(id), data);
-}
-function loadMore(nextPage) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/ekskul?page=".concat(nextPage));
-}
 
 /***/ }),
 
@@ -813,17 +1117,51 @@ function httpFile() {
 
 /***/ }),
 
-/***/ "./resources/js/views/Ekskuls.vue":
-/*!****************************************!*\
-  !*** ./resources/js/views/Ekskuls.vue ***!
-  \****************************************/
+/***/ "./resources/js/services/mapel_service.js":
+/*!************************************************!*\
+  !*** ./resources/js/services/mapel_service.js ***!
+  \************************************************/
+/*! exports provided: createMapel, loadMapels, deleteMapel, updateMapel, loadMore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMapel", function() { return createMapel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMapels", function() { return loadMapels; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteMapel", function() { return deleteMapel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateMapel", function() { return updateMapel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
+/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
+
+function createMapel(data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/mapel', data);
+}
+function loadMapels() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/mapel');
+}
+function deleteMapel(id) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/mapel/".concat(id));
+}
+function updateMapel(id, data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/mapel/".concat(id), data);
+}
+function loadMore(nextPage) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/mapel?page=".concat(nextPage));
+}
+
+/***/ }),
+
+/***/ "./resources/js/views/Mapels.vue":
+/*!***************************************!*\
+  !*** ./resources/js/views/Mapels.vue ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Ekskuls.vue?vue&type=template&id=3429f0a2& */ "./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&");
-/* harmony import */ var _Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ekskuls.vue?vue&type=script&lang=js& */ "./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mapels.vue?vue&type=template&id=105e30a2& */ "./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&");
+/* harmony import */ var _Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Mapels.vue?vue&type=script&lang=js& */ "./resources/js/views/Mapels.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -833,9 +1171,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -845,38 +1183,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/Ekskuls.vue"
+component.options.__file = "resources/js/views/Mapels.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&":
-/*!*****************************************************************!*\
-  !*** ./resources/js/views/Ekskuls.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************/
+/***/ "./resources/js/views/Mapels.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./resources/js/views/Mapels.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Ekskuls.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Mapels.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&":
-/*!***********************************************************************!*\
-  !*** ./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2& ***!
-  \***********************************************************************/
+/***/ "./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2& ***!
+  \**********************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Ekskuls.vue?vue&type=template&id=3429f0a2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Mapels.vue?vue&type=template&id=105e30a2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Mapels.vue?vue&type=template&id=105e30a2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Mapels_vue_vue_type_template_id_105e30a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -20,6 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('guru', 'GuruController');
 Route::resource('siswa', 'SiswaController');
+Route::get('getsiswakela/{getsiswakela}', 'SiswaController@showByKela');
 Route::resource('mapel', 'MapelController');
 Route::resource('kela', 'KelaController');
+Route::put('updatekuota/{updatekuota}', 'KelaController@updateKuota');
+Route::put('hapuskuota/{hapuskuota}', 'KelaController@hapusKuota');
 Route::resource('ekskul', 'EkskulController');
+Route::resource('kelkel', 'KelKelController');

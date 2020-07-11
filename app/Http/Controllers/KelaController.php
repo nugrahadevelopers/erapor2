@@ -14,7 +14,9 @@ class KelaController extends Controller
      */
     public function index()
     {
-        $kelas = Kela::orderBy('created_at', 'desc')->paginate(5);
+        $kelas = Kela::orderBy('created_at', 'desc')->paginate(10);
+        // $kelas = Kela::all();
+        // $kelas = Kela::with('siswa')->get();
         return response()->json($kelas, 200);
     }
 
@@ -93,6 +95,38 @@ class KelaController extends Controller
 
         $kela->tingkat = $request->tingkat;
         $kela->nama_kelas = $request->nama_kelas;
+
+        if ($kela->save()) {
+            return response()->json($kela, 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
+    }
+
+    public function updateKuota($id)
+    {
+        $kela = Kela::where('id', $id)->first();
+
+        $kela->kuota += 1;
+
+        if ($kela->save()) {
+            return response()->json($kela, 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
+    }
+
+    public function hapusKuota($id)
+    {
+        $kela = Kela::where('id', $id)->first();
+
+        $kela->kuota -= 1;
 
         if ($kela->save()) {
             return response()->json($kela, 200);

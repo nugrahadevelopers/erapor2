@@ -19,6 +19,14 @@ export function updateKelas(id, data) {
     return httpFile().post(`/kela/${id}`, data);
 }
 
+export function updateKuota(id) {
+    return httpFile().put(`/updatekuota/${id}`);
+}
+
+export function hapusKuota(id) {
+    return httpFile().put(`/hapuskuota/${id}`);
+}
+
 export function loadMore(nextPage) {
     return http().get(`/kela?page=${nextPage}`);
 }

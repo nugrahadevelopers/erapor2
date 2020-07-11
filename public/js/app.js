@@ -62387,6 +62387,15 @@ var render = function() {
                           attrs: { to: "/ekskul", exact: "" }
                         },
                         [_vm._v("Ekstrakulikuler")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/setkelas", exact: "" }
+                        },
+                        [_vm._v("Kelompok Kelas")]
                       )
                     ],
                     1
@@ -79378,19 +79387,19 @@ var routes = [{
   path: '/guru',
   name: 'guru',
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./views/Gurus.vue */ "./resources/js/views/Gurus.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./views/Gurus.vue */ "./resources/js/views/Gurus.vue"));
   }
 }, {
   path: '/siswa',
   name: 'siswa',
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./views/Siswas.vue */ "./resources/js/views/Siswas.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ./views/Siswas.vue */ "./resources/js/views/Siswas.vue"));
   }
 }, {
   path: '/mapel',
   name: 'mapel',
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./views/Mapels.vue */ "./resources/js/views/Mapels.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./views/Mapels.vue */ "./resources/js/views/Mapels.vue"));
   }
 }, {
   path: '/kelas',
@@ -79402,8 +79411,21 @@ var routes = [{
   path: '/ekskul',
   name: 'ekskul',
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./views/Ekskuls.vue */ "./resources/js/views/Ekskuls.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./views/Ekskuls.vue */ "./resources/js/views/Ekskuls.vue"));
   }
+}, {
+  path: '/setkelas',
+  name: 'setkelas',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ./views/SetKelas.vue */ "./resources/js/views/SetKelas.vue"));
+  }
+}, {
+  path: '/setkelas/tambahsiswa',
+  name: 'tambahsiswa',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./views/AddSiswa.vue */ "./resources/js/views/AddSiswa.vue"));
+  },
+  props: true
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes,
@@ -79510,8 +79532,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\erapor2\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\erapor2\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! c:\xampp\htdocs\erapor2\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! c:\xampp\htdocs\erapor2\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

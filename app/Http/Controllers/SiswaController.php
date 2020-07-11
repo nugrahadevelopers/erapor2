@@ -95,8 +95,9 @@ class SiswaController extends Controller
         $siswa->almt_wali = $request->almt_wali;
         $siswa->tlp_wali = $request->tlp_wali;
         $siswa->pekerjaan_wali = $request->pekerjaan_wali;
+        $siswa->kela_id = 0;
 
-        if($siswa->save()) {
+        if ($siswa->save()) {
             return response()->json($siswa, 200);
         } else {
             return response()->json([
@@ -115,6 +116,15 @@ class SiswaController extends Controller
     public function show(Siswa $siswa)
     {
         //
+    }
+
+    public function showByKela($kelas)
+    {
+        $kelKels = Siswa::where([
+            ['kela_id', '=', 0],
+            ['diterima_dikelas', '=', $kelas]
+        ])->get();
+        return response()->json($kelKels, 200);
     }
 
     /**
@@ -195,8 +205,23 @@ class SiswaController extends Controller
         $siswa->almt_wali = $request->almt_wali;
         $siswa->tlp_wali = $request->tlp_wali;
         $siswa->pekerjaan_wali = $request->pekerjaan_wali;
+        $siswa->kela_id = $request->kela_id;
 
-        if($siswa->save()) {
+        if ($siswa->save()) {
+            return response()->json($siswa, 200);
+        } else {
+            return response()->json([
+                'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
+                'status' => 500
+            ], 500);
+        }
+    }
+
+    public function updateKelaId(Request $request, Siswa $siswa)
+    {
+        $siswa->kela_id = $request->kela_id;
+
+        if ($siswa->save()) {
             return response()->json($siswa, 200);
         } else {
             return response()->json([
@@ -214,7 +239,7 @@ class SiswaController extends Controller
      */
     public function destroy(Siswa $siswa)
     {
-        if($siswa->delete()) {
+        if ($siswa->delete()) {
             return response()->json([
                 'message' => 'Berhasil Dihapus',
                 'status' => 200

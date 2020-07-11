@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Siswas.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Siswas.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/siswa_service */ "./resources/js/services/siswa_service.js");
+/* harmony import */ var _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/ekskul_service */ "./resources/js/services/ekskul_service.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -125,812 +125,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "siswa",
+  name: "ekskul",
   data: function data() {
     return {
-      siswas: [],
-      siswaData: {
-        nis: "",
-        nisn: "",
-        nama: "",
-        jenis_kelamin: "Pria",
-        tempat_lahir: "",
-        tgl_lahir: "",
-        agama: "",
-        alamat: "",
-        no_telp: "",
-        sekolah_asal: "",
-        alamat_sekolah_asal: "",
-        diterima_dikelas: "",
-        diterima_tgl: "",
-        no_ijazah: "",
-        thn_ijazah: "",
-        no_skhun: "",
-        thn_skhun: "",
-        nama_ayah: "",
-        nama_ibu: "",
-        almt_ortu: "",
-        tlp_ortu: "",
-        pekerjaan_ayah: "",
-        pekerjaan_ibu: "",
-        nama_wali: "",
-        almt_wali: "",
-        tlp_wali: "",
-        pekerjaan_wali: ""
-      },
-      dropGender: {
-        dropValue: "Pria",
-        dropOption: [{
-          value: "Pria",
-          text: "Pria"
-        }, {
-          value: "Wanita",
-          text: "Wanita"
-        }]
+      ekskuls: [],
+      ekskulData: {
+        nama_ekskul: ""
       },
       moreExists: false,
       nextPage: 0,
-      editSiswaData: {},
+      editEkskulData: {},
       errors: {}
     };
   },
   mounted: function mounted() {
-    this.loadSiswas();
+    this.loadEkskuls();
   },
   methods: {
-    loadSiswas: function () {
-      var _loadSiswas = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    hideNewEkskulModal: function hideNewEkskulModal() {
+      this.$refs.newEkskulModal.hide();
+    },
+    showNewEkskulModal: function showNewEkskulModal() {
+      this.$refs.newEkskulModal.show();
+    },
+    loadEkskuls: function () {
+      var _loadEkskuls = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -938,11 +159,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.prev = 0;
                 _context.next = 3;
-                return _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__["loadSiswas"]();
+                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["loadEkskuls"]();
 
               case 3:
                 response = _context.sent;
-                this.siswas = response.data.data;
+                this.ekskuls = response.data.data;
 
                 if (response.data.current_page < response.data.last_page) {
                   this.moreExists = true;
@@ -970,106 +191,78 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this, [[0, 8]]);
       }));
 
-      function loadSiswas() {
-        return _loadSiswas.apply(this, arguments);
+      function loadEkskuls() {
+        return _loadEkskuls.apply(this, arguments);
       }
 
-      return loadSiswas;
+      return loadEkskuls;
     }(),
-    createSiswa: function () {
-      var _createSiswa = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    createEkskul: function () {
+      var _createEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 formData = new FormData();
-                formData.append("nis", this.siswaData.nis);
-                formData.append("nisn", this.siswaData.nisn);
-                formData.append("nama", this.siswaData.nama);
-                formData.append("jenis_kelamin", this.siswaData.jenis_kelamin);
-                formData.append("tempat_lahir", this.siswaData.tempat_lahir);
-                formData.append("tgl_lahir", this.siswaData.tgl_lahir);
-                formData.append("agama", this.siswaData.agama);
-                formData.append("alamat", this.siswaData.alamat);
-                formData.append("no_telp", this.siswaData.no_telp);
-                formData.append("sekolah_asal", this.siswaData.sekolah_asal);
-                formData.append("alamat_sekolah_asal", this.siswaData.alamat_sekolah_asal);
-                formData.append("diterima_dikelas", this.siswaData.diterima_dikelas);
-                formData.append("diterima_tgl", this.siswaData.diterima_tgl);
-                formData.append("no_ijazah", this.siswaData.no_ijazah);
-                formData.append("thn_ijazah", this.siswaData.thn_ijazah);
-                formData.append("no_skhun", this.siswaData.no_skhun);
-                formData.append("thn_skhun", this.siswaData.thn_skhun);
-                formData.append("nama_ayah", this.siswaData.nama_ayah);
-                formData.append("nama_ibu", this.siswaData.nama_ibu);
-                formData.append("almt_ortu", this.siswaData.almt_ortu);
-                formData.append("tlp_ortu", this.siswaData.tlp_ortu);
-                formData.append("pekerjaan_ayah", this.siswaData.pekerjaan_ayah);
-                formData.append("pekerjaan_ibu", this.siswaData.pekerjaan_ibu);
-                formData.append("nama_wali", this.siswaData.nama_wali);
-                formData.append("almt_wali", this.siswaData.almt_wali);
-                formData.append("tlp_wali", this.siswaData.tlp_wali);
-                formData.append("pekerjaan_wali", this.siswaData.pekerjaan_wali);
-                _context2.prev = 28;
-                _context2.next = 31;
-                return _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__["createSiswa"](formData);
+                formData.append("nama_ekskul", this.ekskulData.nama_ekskul);
+                _context2.prev = 2;
+                _context2.next = 5;
+                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["createEkskul"](formData);
 
-              case 31:
+              case 5:
                 response = _context2.sent;
-                this.siswas.unshift(response.data); // this.hideNewGuruModal();
-
+                this.ekskuls.unshift(response.data);
+                this.hideNewEkskulModal();
                 this.flashMessage.success({
-                  message: "Data Siswa Berhasil Ditambahkan",
+                  message: "Data Ekskul Berhasil Ditambahkan",
                   time: 5000
                 });
-                this.siswaData = {
-                  nis: "",
-                  nisn: "",
-                  nama: ""
+                this.ekskulData = {
+                  nama_ekskul: ""
                 };
-                _context2.next = 46;
+                _context2.next = 21;
                 break;
 
-              case 37:
-                _context2.prev = 37;
-                _context2.t0 = _context2["catch"](28);
+              case 12:
+                _context2.prev = 12;
+                _context2.t0 = _context2["catch"](2);
                 _context2.t1 = _context2.t0.response.status;
-                _context2.next = _context2.t1 === 422 ? 42 : 44;
+                _context2.next = _context2.t1 === 422 ? 17 : 19;
                 break;
 
-              case 42:
+              case 17:
                 this.errors = _context2.t0.response.data.errors;
-                return _context2.abrupt("break", 46);
+                return _context2.abrupt("break", 21);
 
-              case 44:
+              case 19:
                 this.flashMessage.error({
                   message: "Terjadi masalah silahkan refresh halaman ini!",
                   time: 5000
                 });
-                return _context2.abrupt("break", 46);
+                return _context2.abrupt("break", 21);
 
-              case 46:
+              case 21:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[28, 37]]);
+        }, _callee2, this, [[2, 12]]);
       }));
 
-      function createSiswa() {
-        return _createSiswa.apply(this, arguments);
+      function createEkskul() {
+        return _createEkskul.apply(this, arguments);
       }
 
-      return createSiswa;
+      return createEkskul;
     }(),
-    deleteSiswa: function () {
-      var _deleteSiswa = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(siswa) {
+    deleteEkskul: function () {
+      var _deleteEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(ekskul) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                if (window.confirm("Anda Akan Menghapus ".concat(siswa.nama))) {
+                if (window.confirm("Anda Akan Menghapus ".concat(ekskul.nama_ekskul))) {
                   _context3.next = 2;
                   break;
                 }
@@ -1079,14 +272,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _context3.prev = 2;
                 _context3.next = 5;
-                return _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__["deleteSiswa"](siswa.id);
+                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["deleteEkskul"](ekskul.id);
 
               case 5:
-                this.siswas = this.siswas.filter(function (obj) {
-                  return obj.id != siswa.id;
+                this.ekskuls = this.ekskuls.filter(function (obj) {
+                  return obj.id != ekskul.id;
                 });
                 this.flashMessage.success({
-                  message: "Data Siswa Berhasil Dihapus",
+                  message: "Data Ekskul Berhasil Dihapus",
                   time: 5000
                 });
                 _context3.next = 12;
@@ -1108,24 +301,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee3, this, [[2, 9]]);
       }));
 
-      function deleteSiswa(_x) {
-        return _deleteSiswa.apply(this, arguments);
+      function deleteEkskul(_x) {
+        return _deleteEkskul.apply(this, arguments);
       }
 
-      return deleteSiswa;
+      return deleteEkskul;
     }(),
-    hideEditSiswaModal: function hideEditSiswaModal() {
-      this.$refs.editSiswaModal.hide();
+    hideEditEkskulModal: function hideEditEkskulModal() {
+      this.$refs.editEkskulModal.hide();
     },
-    showEditSiswaModal: function showEditSiswaModal() {
-      this.$refs.editSiswaModal.show();
+    showEditEkskulModal: function showEditEkskulModal() {
+      this.$refs.editEkskulModal.show();
     },
-    editSiswa: function editSiswa(siswa) {
-      this.editSiswaData = _objectSpread({}, siswa);
-      this.showEditSiswaModal();
+    editEkskul: function editEkskul(ekskul) {
+      this.editEkskulData = _objectSpread({}, ekskul);
+      this.showEditEkskulModal();
     },
-    updateSiswa: function () {
-      var _updateSiswa = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+    updateEkskul: function () {
+      var _updateEkskul = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
         var formData, response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
           while (1) {
@@ -1133,75 +326,49 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context4.prev = 0;
                 formData = new FormData();
-                formData.append("nis", this.editSiswaData.nis);
-                formData.append("nisn", this.editSiswaData.nisn);
-                formData.append("nama", this.editSiswaData.nama);
-                formData.append("jenis_kelamin", this.editSiswaData.jenis_kelamin);
-                formData.append("tempat_lahir", this.editSiswaData.tempat_lahir);
-                formData.append("tgl_lahir", this.editSiswaData.tgl_lahir);
-                formData.append("agama", this.editSiswaData.agama);
-                formData.append("alamat", this.editSiswaData.alamat);
-                formData.append("no_telp", this.editSiswaData.no_telp);
-                formData.append("sekolah_asal", this.editSiswaData.sekolah_asal);
-                formData.append("alamat_sekolah_asal", this.editSiswaData.alamat_sekolah_asal);
-                formData.append("diterima_dikelas", this.editSiswaData.diterima_dikelas);
-                formData.append("diterima_tgl", this.editSiswaData.diterima_tgl);
-                formData.append("no_ijazah", this.editSiswaData.no_ijazah);
-                formData.append("thn_ijazah", this.editSiswaData.thn_ijazah);
-                formData.append("no_skhun", this.editSiswaData.no_skhun);
-                formData.append("thn_skhun", this.editSiswaData.thn_skhun);
-                formData.append("nama_ayah", this.editSiswaData.nama_ayah);
-                formData.append("nama_ibu", this.editSiswaData.nama_ibu);
-                formData.append("almt_ortu", this.editSiswaData.almt_ortu);
-                formData.append("tlp_ortu", this.editSiswaData.tlp_ortu);
-                formData.append("pekerjaan_ayah", this.editSiswaData.pekerjaan_ayah);
-                formData.append("pekerjaan_ibu", this.editSiswaData.pekerjaan_ibu);
-                formData.append("nama_wali", this.editSiswaData.nama_wali);
-                formData.append("almt_wali", this.editSiswaData.almt_wali);
-                formData.append("tlp_wali", this.editSiswaData.tlp_wali);
-                formData.append("pekerjaan_wali", this.editSiswaData.pekerjaan_wali);
+                formData.append("nama_ekskul", this.editEkskulData.nama_ekskul);
                 formData.append("_method", "put");
-                _context4.next = 32;
-                return _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__["updateSiswa"](this.editSiswaData.id, formData);
+                _context4.next = 6;
+                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["updateEkskul"](this.editEkskulData.id, formData);
 
-              case 32:
+              case 6:
                 response = _context4.sent;
-                this.siswas.map(function (siswa) {
-                  if (siswa.id == response.data.id) {
+                this.ekskuls.map(function (ekskul) {
+                  if (ekskul.id == response.data.id) {
                     for (var key in response.data) {
-                      siswa[key] = response.data[key];
+                      ekskul[key] = response.data[key];
                     }
                   }
                 });
-                this.hideEditSiswaModal();
+                this.hideEditEkskulModal();
                 this.flashMessage.success({
-                  message: "Data Siswa Berhasil Diubah",
+                  message: "Data Ekskul Berhasil Diubah",
                   time: 5000
                 });
-                _context4.next = 41;
+                _context4.next = 15;
                 break;
 
-              case 38:
-                _context4.prev = 38;
+              case 12:
+                _context4.prev = 12;
                 _context4.t0 = _context4["catch"](0);
                 this.flashMessage.error({
                   message: _context4.t0.response.data.message,
                   time: 5000
                 });
 
-              case 41:
+              case 15:
               case "end":
                 return _context4.stop();
             }
           }
-        }, _callee4, this, [[0, 38]]);
+        }, _callee4, this, [[0, 12]]);
       }));
 
-      function updateSiswa() {
-        return _updateSiswa.apply(this, arguments);
+      function updateEkskul() {
+        return _updateEkskul.apply(this, arguments);
       }
 
-      return updateSiswa;
+      return updateEkskul;
     }(),
     loadMore: function () {
       var _loadMore = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
@@ -1214,7 +381,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context5.prev = 0;
                 _context5.next = 3;
-                return _services_siswa_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
+                return _services_ekskul_service__WEBPACK_IMPORTED_MODULE_1__["loadMore"](this.nextPage);
 
               case 3:
                 response = _context5.sent;
@@ -1227,7 +394,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 response.data.data.forEach(function (data) {
-                  _this.siswas.push(data);
+                  _this.ekskuls.push(data);
                 });
                 _context5.next = 11;
                 break;
@@ -1259,10 +426,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb&":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb& ***!
-  \****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2& ***!
+  \*****************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1278,1348 +445,104 @@ var render = function() {
     "div",
     { staticClass: "container-fluid" },
     [
-      _c(
-        "b-card",
-        { staticClass: "mt-4", attrs: { "no-body": "" } },
-        [
+      _c("div", { staticClass: "card mb-4 mt-5" }, [
+        _c("div", { staticClass: "card-header d-flex" }, [
+          _c("i", { staticClass: "fas fa-chart-area mr-1" }),
+          _vm._v("\n      Data Ekstrakulikuler\n      "),
           _c(
-            "b-tabs",
-            { attrs: { pills: "", card: "" } },
+            "button",
+            {
+              staticClass: "btn btn-primary btn-sm ml-auto",
+              on: { click: _vm.showNewEkskulModal }
+            },
             [
-              _c(
-                "b-tab",
-                { attrs: { title: "Data Siswa", active: "" } },
-                [
-                  _c("b-card-text", [
-                    _c("table", { staticClass: "table" }, [
-                      _c("thead", [
-                        _c("tr", [
-                          _c("td", [_vm._v("#")]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("NIS")]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("NISN")]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("NAMA")]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v("AKSI")])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "tbody",
-                        _vm._l(_vm.siswas, function(siswa, index) {
-                          return _c("tr", { key: index }, [
-                            _c("td", [_vm._v(_vm._s(index + 1))]),
-                            _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(siswa.nis))]),
-                            _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(siswa.nisn))]),
-                            _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(siswa.nama))]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary btn-sm",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.editSiswa(siswa)
-                                    }
-                                  }
-                                },
-                                [_c("span", { staticClass: "fa fa-edit" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-danger btn-sm",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteSiswa(siswa)
-                                    }
-                                  }
-                                },
-                                [_c("span", { staticClass: "fa fa-trash" })]
-                              )
-                            ])
-                          ])
-                        }),
-                        0
-                      )
-                    ]),
+              _c("span", { staticClass: "fa fa-plus" }),
+              _vm._v(" Tambah Ekskul\n      ")
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("table", { staticClass: "table" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.ekskuls, function(ekskul, index) {
+                return _c("tr", { key: index }, [
+                  _c("td", [_vm._v(_vm._s(index + 1))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(ekskul.nama_ekskul))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary btn-sm",
+                        on: {
+                          click: function($event) {
+                            return _vm.editEkskul(ekskul)
+                          }
+                        }
+                      },
+                      [_c("span", { staticClass: "fa fa-edit" })]
+                    ),
                     _vm._v(" "),
                     _c(
-                      "div",
+                      "button",
                       {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.moreExists,
-                            expression: "moreExists"
+                        staticClass: "btn btn-danger btn-sm",
+                        on: {
+                          click: function($event) {
+                            return _vm.deleteEkskul(ekskul)
                           }
-                        ],
-                        staticClass: "text-center"
+                        }
                       },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary btn-sm",
-                            attrs: { type: "button" },
-                            on: { click: _vm.loadMore }
-                          },
-                          [
-                            _c("span", { staticClass: "fa fa-arrow-down" }),
-                            _vm._v("\n              Lebih Banyak\n            ")
-                          ]
-                        )
-                      ]
+                      [_c("span", { staticClass: "fa fa-trash" })]
                     )
                   ])
-                ],
-                1
-              ),
-              _vm._v(" "),
+                ])
+              }),
+              0
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.moreExists,
+                  expression: "moreExists"
+                }
+              ],
+              staticClass: "text-center"
+            },
+            [
               _c(
-                "b-tab",
-                { attrs: { title: "Tambah Siswa" } },
+                "button",
+                {
+                  staticClass: "btn btn-primary btn-sm",
+                  attrs: { type: "button" },
+                  on: { click: _vm.loadMore }
+                },
                 [
-                  _c("b-card-text", [
-                    _c("div", { staticClass: "d-block" }, [
-                      _c(
-                        "form",
-                        {
-                          on: {
-                            submit: function($event) {
-                              $event.preventDefault()
-                              return _vm.createSiswa($event)
-                            }
-                          }
-                        },
-                        [
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("NIS")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nis,
-                                      expression: "siswaData.nis"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nis",
-                                    placeholder: "Masukan NIS"
-                                  },
-                                  domProps: { value: _vm.siswaData.nis },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nis",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "phone" } }, [
-                                  _vm._v("NISN")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nisn,
-                                      expression: "siswaData.nisn"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nisn",
-                                    placeholder: "Masukan NISN"
-                                  },
-                                  domProps: { value: _vm.siswaData.nisn },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nisn",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "phone" } }, [
-                                  _vm._v("Nama")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nama,
-                                      expression: "siswaData.nama"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nama",
-                                    placeholder: "Masukan NAMA"
-                                  },
-                                  domProps: { value: _vm.siswaData.nama },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nama",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c(
-                                "div",
-                                { staticClass: "form-group" },
-                                [
-                                  _c("label", { attrs: { for: "phone" } }, [
-                                    _vm._v("Jenis Kelamin")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-dropdown",
-                                    {
-                                      attrs: {
-                                        split: "",
-                                        "split-variant": "outline"
-                                      },
-                                      model: {
-                                        value: _vm.dropGender.dropValue,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.dropGender,
-                                            "dropValue",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "dropGender.dropValue"
-                                      }
-                                    },
-                                    _vm._l(_vm.dropGender.dropOption, function(
-                                      dropoption
-                                    ) {
-                                      return _c(
-                                        "b-dropdown-item",
-                                        {
-                                          key: dropoption.value,
-                                          attrs: { value: dropoption.value },
-                                          on: {
-                                            click: function($event) {
-                                              ;(_vm.siswaData.jenis_kelamin =
-                                                dropoption.value),
-                                                (_vm.dropGender.dropValue =
-                                                  dropoption.value)
-                                            }
-                                          }
-                                        },
-                                        [_vm._v(_vm._s(dropoption.text))]
-                                      )
-                                    }),
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("p", [
-                                    _vm._v(_vm._s(_vm.dropGender.dropValue))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "invalid-feedback" })
-                                ],
-                                1
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Tempat Lahir")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.tempat_lahir,
-                                      expression: "siswaData.tempat_lahir"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "tempat_lahir",
-                                    placeholder: "Masukan Tempat Lahir"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.tempat_lahir
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "tempat_lahir",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c(
-                                "div",
-                                { staticClass: "form-group" },
-                                [
-                                  _c("label", { attrs: { for: "phone" } }, [
-                                    _vm._v("Tanggal Lahir")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-input-group",
-                                    { staticClass: "mb-3" },
-                                    [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "example-input",
-                                          type: "text",
-                                          placeholder: "YYYY-MM-DD",
-                                          autocomplete: "off"
-                                        },
-                                        model: {
-                                          value: _vm.siswaData.tgl_lahir,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.siswaData,
-                                              "tgl_lahir",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "siswaData.tgl_lahir"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-input-group-append",
-                                        [
-                                          _c("b-form-datepicker", {
-                                            attrs: {
-                                              id: "example-datepicker",
-                                              "button-only": "",
-                                              right: ""
-                                            },
-                                            model: {
-                                              value: _vm.siswaData.tgl_lahir,
-                                              callback: function($$v) {
-                                                _vm.$set(
-                                                  _vm.siswaData,
-                                                  "tgl_lahir",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "siswaData.tgl_lahir"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "invalid-feedback" })
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "phone" } }, [
-                                  _vm._v("Agama")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.agama,
-                                      expression: "siswaData.agama"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "agama",
-                                    placeholder: "Masukan Agama"
-                                  },
-                                  domProps: { value: _vm.siswaData.agama },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "agama",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Alamat")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.alamat,
-                                      expression: "siswaData.alamat"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "alamat",
-                                    placeholder: "Masukan Alamat"
-                                  },
-                                  domProps: { value: _vm.siswaData.alamat },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "alamat",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Nomor Telepon")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.no_telp,
-                                      expression: "siswaData.no_telp"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "no_telp",
-                                    placeholder: "Masukan Nomor Telepon"
-                                  },
-                                  domProps: { value: _vm.siswaData.no_telp },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "no_telp",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Sekolah Asal")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.sekolah_asal,
-                                      expression: "siswaData.sekolah_asal"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "sekolah_asal",
-                                    placeholder: "Masukan Sekolah Asal"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.sekolah_asal
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "sekolah_asal",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Alamat Sekolah Asal")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.alamat_sekolah_asal,
-                                      expression:
-                                        "siswaData.alamat_sekolah_asal"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "alamat_sekolah_asal",
-                                    placeholder: "Masukan Alamat Sekolah Asal"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.alamat_sekolah_asal
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "alamat_sekolah_asal",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Diterima Dikelas")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.diterima_dikelas,
-                                      expression: "siswaData.diterima_dikelas"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "diterima_dikelas",
-                                    placeholder: "Masukan Kelas"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.diterima_dikelas
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "diterima_dikelas",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c(
-                                "div",
-                                { staticClass: "form-group" },
-                                [
-                                  _c("label", { attrs: { for: "name" } }, [
-                                    _vm._v("Tanggal Diterima")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-input-group",
-                                    { staticClass: "mb-3" },
-                                    [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "diterima_tgl",
-                                          type: "text",
-                                          placeholder: "YYYY-MM-DD",
-                                          autocomplete: "off"
-                                        },
-                                        model: {
-                                          value: _vm.siswaData.diterima_tgl,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.siswaData,
-                                              "diterima_tgl",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "siswaData.diterima_tgl"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-input-group-append",
-                                        [
-                                          _c("b-form-datepicker", {
-                                            attrs: {
-                                              id: "diterima_tgl",
-                                              "button-only": "",
-                                              right: ""
-                                            },
-                                            model: {
-                                              value: _vm.siswaData.diterima_tgl,
-                                              callback: function($$v) {
-                                                _vm.$set(
-                                                  _vm.siswaData,
-                                                  "diterima_tgl",
-                                                  $$v
-                                                )
-                                              },
-                                              expression:
-                                                "siswaData.diterima_tgl"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "invalid-feedback" })
-                                ],
-                                1
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("No. Ijazah")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.no_ijazah,
-                                      expression: "siswaData.no_ijazah"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "no_ijazah",
-                                    placeholder: "Masukan Nomor Ijazah"
-                                  },
-                                  domProps: { value: _vm.siswaData.no_ijazah },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "no_ijazah",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Tahun Ijazah")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.thn_ijazah,
-                                      expression: "siswaData.thn_ijazah"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "thn_ijazah",
-                                    placeholder: "Masukan Tahun Ijazah"
-                                  },
-                                  domProps: { value: _vm.siswaData.thn_ijazah },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "thn_ijazah",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("No. SKHUN")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.no_skhun,
-                                      expression: "siswaData.no_skhun"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "no_skhun",
-                                    placeholder: "Masukan Nomor SKHUN"
-                                  },
-                                  domProps: { value: _vm.siswaData.no_skhun },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "no_skhun",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Tahun SKHUN")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.thn_skhun,
-                                      expression: "siswaData.thn_skhun"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "thn_skhun",
-                                    placeholder: "Masukan Tahun SKHUN"
-                                  },
-                                  domProps: { value: _vm.siswaData.thn_skhun },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "thn_skhun",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Nama Ayah")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nama_ayah,
-                                      expression: "siswaData.nama_ayah"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nama_ayah",
-                                    placeholder: "Masukan Nama Ayah"
-                                  },
-                                  domProps: { value: _vm.siswaData.nama_ayah },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nama_ayah",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Nama Ibu")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nama_ibu,
-                                      expression: "siswaData.nama_ibu"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nama_ibu",
-                                    placeholder: "Masukan Nama Ibu"
-                                  },
-                                  domProps: { value: _vm.siswaData.nama_ibu },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nama_ibu",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Alamat Ortu")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.almt_ortu,
-                                      expression: "siswaData.almt_ortu"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "almt_ortu",
-                                    placeholder: "Masukan Alamat Orang Tua"
-                                  },
-                                  domProps: { value: _vm.siswaData.almt_ortu },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "almt_ortu",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Telp Ortu")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.tlp_ortu,
-                                      expression: "siswaData.tlp_ortu"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "tlp_ortu",
-                                    placeholder: "Masukan No. Telepon Ortu"
-                                  },
-                                  domProps: { value: _vm.siswaData.tlp_ortu },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "tlp_ortu",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "row" }, [
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Perkerjaan Ayah")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.pekerjaan_ayah,
-                                      expression: "siswaData.pekerjaan_ayah"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "pekerjaan_ayah",
-                                    placeholder: "Masukan Perkerjaan Ayah"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.pekerjaan_ayah
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "pekerjaan_ayah",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Perkerjaan Ibu")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.pekerjaan_ibu,
-                                      expression: "siswaData.pekerjaan_ibu"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "pekerjaan_ibu",
-                                    placeholder: "Masukan Perkerjaan Ibu"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.pekerjaan_ibu
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "pekerjaan_ibu",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Nama Wali")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.nama_wali,
-                                      expression: "siswaData.nama_wali"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "nama_wali",
-                                    placeholder: "Masukan Nama Wali"
-                                  },
-                                  domProps: { value: _vm.siswaData.nama_wali },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "nama_wali",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Alamat Wali")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.almt_wali,
-                                      expression: "siswaData.almt_wali"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "almt_wali",
-                                    placeholder: "Masukan Alamat Wali"
-                                  },
-                                  domProps: { value: _vm.siswaData.almt_wali },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "almt_wali",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Telp Wali")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.tlp_wali,
-                                      expression: "siswaData.tlp_wali"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "tlp_wali",
-                                    placeholder: "Masukan Telp Wali"
-                                  },
-                                  domProps: { value: _vm.siswaData.tlp_wali },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "tlp_wali",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col" }, [
-                              _c("div", { staticClass: "form-group" }, [
-                                _c("label", { attrs: { for: "name" } }, [
-                                  _vm._v("Perkerjaan Wali")
-                                ]),
-                                _vm._v(" "),
-                                _c("input", {
-                                  directives: [
-                                    {
-                                      name: "model",
-                                      rawName: "v-model",
-                                      value: _vm.siswaData.pekerjaan_wali,
-                                      expression: "siswaData.pekerjaan_wali"
-                                    }
-                                  ],
-                                  staticClass: "form-control",
-                                  attrs: {
-                                    type: "text",
-                                    id: "pekerjaan_wali",
-                                    placeholder: "Masukan Perkerjaan Wali"
-                                  },
-                                  domProps: {
-                                    value: _vm.siswaData.pekerjaan_wali
-                                  },
-                                  on: {
-                                    input: function($event) {
-                                      if ($event.target.composing) {
-                                        return
-                                      }
-                                      _vm.$set(
-                                        _vm.siswaData,
-                                        "pekerjaan_wali",
-                                        $event.target.value
-                                      )
-                                    }
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "invalid-feedback" })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("hr"),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "text-right" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary",
-                                attrs: { type: "submit" }
-                              },
-                              [
-                                _c("span", { staticClass: "fa fa-check" }),
-                                _vm._v(" Simpan\n                ")
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    ])
-                  ])
-                ],
-                1
+                  _c("span", { staticClass: "fa fa-arrow-down" }),
+                  _vm._v("\n          Lebih Banyak\n        ")
+                ]
               )
-            ],
-            1
+            ]
           )
-        ],
-        1
-      ),
+        ])
+      ]),
       _vm._v(" "),
       _c(
         "b-modal",
         {
-          ref: "editSiswaModal",
-          attrs: { size: "xl", "hide-footer": "", title: "Ubah Data Siswa" }
+          ref: "newEkskulModal",
+          attrs: { "hide-footer": "", title: "Tambah Data Ekskul" }
         },
         [
           _c("div", { staticClass: "d-block" }, [
@@ -2629,1171 +552,51 @@ var render = function() {
                 on: {
                   submit: function($event) {
                     $event.preventDefault()
-                    return _vm.updateSiswa($event)
+                    return _vm.createEkskul($event)
                   }
                 }
               },
               [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [_vm._v("NIS")]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nis,
-                            expression: "editSiswaData.nis"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nis",
-                          placeholder: "Masukan NIS"
-                        },
-                        domProps: { value: _vm.editSiswaData.nis },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nis",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nama_ekskul" } }, [
+                    _vm._v("Nama")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "phone" } }, [
-                        _vm._v("NISN")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nisn,
-                            expression: "editSiswaData.nisn"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nisn",
-                          placeholder: "Masukan NISN"
-                        },
-                        domProps: { value: _vm.editSiswaData.nisn },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nisn",
-                              $event.target.value
-                            )
-                          }
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.ekskulData.nama_ekskul,
+                        expression: "ekskulData.nama_ekskul"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nama_ekskul",
+                      placeholder: "Masukan Nama Ekskul"
+                    },
+                    domProps: { value: _vm.ekskulData.nama_ekskul },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
                         }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
+                        _vm.$set(
+                          _vm.ekskulData,
+                          "nama_ekskul",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "phone" } }, [
-                        _vm._v("Nama")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nama,
-                            expression: "editSiswaData.nama"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nama",
-                          placeholder: "Masukan NAMA"
-                        },
-                        domProps: { value: _vm.editSiswaData.nama },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nama",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("label", { attrs: { for: "phone" } }, [
-                          _vm._v("Jenis Kelamin")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown",
-                          {
-                            attrs: { split: "", "split-variant": "outline" },
-                            model: {
-                              value: _vm.editSiswaData.jenis_kelamin,
-                              callback: function($$v) {
-                                _vm.$set(
-                                  _vm.editSiswaData,
-                                  "jenis_kelamin",
-                                  $$v
-                                )
-                              },
-                              expression: "editSiswaData.jenis_kelamin"
-                            }
-                          },
-                          _vm._l(_vm.dropGender.dropOption, function(
-                            dropoption
-                          ) {
-                            return _c(
-                              "b-dropdown-item",
-                              {
-                                key: dropoption.value,
-                                attrs: { value: dropoption.value },
-                                on: {
-                                  click: function($event) {
-                                    ;(_vm.editSiswaData.jenis_kelamin =
-                                      dropoption.value),
-                                      (_vm.dropGender.dropValue =
-                                        dropoption.value)
-                                  }
-                                }
-                              },
-                              [_vm._v(_vm._s(dropoption.text))]
-                            )
-                          }),
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(_vm._s(_vm.editSiswaData.jenis_kelamin))
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "invalid-feedback" })
-                      ],
-                      1
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Tempat Lahir")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.tempat_lahir,
-                            expression: "editSiswaData.tempat_lahir"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "tempat_lahir",
-                          placeholder: "Masukan Tempat Lahir"
-                        },
-                        domProps: { value: _vm.editSiswaData.tempat_lahir },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "tempat_lahir",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("label", { attrs: { for: "phone" } }, [
-                          _vm._v("Tanggal Lahir")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "b-input-group",
-                          { staticClass: "mb-3" },
-                          [
-                            _c("b-form-input", {
-                              attrs: {
-                                id: "example-input",
-                                type: "text",
-                                placeholder: "YYYY-MM-DD",
-                                autocomplete: "off"
-                              },
-                              model: {
-                                value: _vm.editSiswaData.tgl_lahir,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.editSiswaData, "tgl_lahir", $$v)
-                                },
-                                expression: "editSiswaData.tgl_lahir"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "b-input-group-append",
-                              [
-                                _c("b-form-datepicker", {
-                                  attrs: {
-                                    id: "example-datepicker",
-                                    "button-only": "",
-                                    right: ""
-                                  },
-                                  model: {
-                                    value: _vm.editSiswaData.tgl_lahir,
-                                    callback: function($$v) {
-                                      _vm.$set(
-                                        _vm.editSiswaData,
-                                        "tgl_lahir",
-                                        $$v
-                                      )
-                                    },
-                                    expression: "editSiswaData.tgl_lahir"
-                                  }
-                                })
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "invalid-feedback" })
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "phone" } }, [
-                        _vm._v("Agama")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.agama,
-                            expression: "editSiswaData.agama"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "agama",
-                          placeholder: "Masukan Agama"
-                        },
-                        domProps: { value: _vm.editSiswaData.agama },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "agama",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Alamat")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.alamat,
-                            expression: "editSiswaData.alamat"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "alamat",
-                          placeholder: "Masukan Alamat"
-                        },
-                        domProps: { value: _vm.editSiswaData.alamat },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "alamat",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Nomor Telepon")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.no_telp,
-                            expression: "editSiswaData.no_telp"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "no_telp",
-                          placeholder: "Masukan Nomor Telepon"
-                        },
-                        domProps: { value: _vm.editSiswaData.no_telp },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "no_telp",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Sekolah Asal")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.sekolah_asal,
-                            expression: "editSiswaData.sekolah_asal"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "sekolah_asal",
-                          placeholder: "Masukan Sekolah Asal"
-                        },
-                        domProps: { value: _vm.editSiswaData.sekolah_asal },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "sekolah_asal",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Alamat Sekolah Asal")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.alamat_sekolah_asal,
-                            expression: "editSiswaData.alamat_sekolah_asal"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "alamat_sekolah_asal",
-                          placeholder: "Masukan Alamat Sekolah Asal"
-                        },
-                        domProps: {
-                          value: _vm.editSiswaData.alamat_sekolah_asal
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "alamat_sekolah_asal",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Diterima Dikelas")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.diterima_dikelas,
-                            expression: "editSiswaData.diterima_dikelas"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "diterima_dikelas",
-                          placeholder: "Masukan Kelas"
-                        },
-                        domProps: { value: _vm.editSiswaData.diterima_dikelas },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "diterima_dikelas",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("label", { attrs: { for: "name" } }, [
-                          _vm._v("Tanggal Diterima")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "b-input-group",
-                          { staticClass: "mb-3" },
-                          [
-                            _c("b-form-input", {
-                              attrs: {
-                                id: "diterima_tgl",
-                                type: "text",
-                                placeholder: "YYYY-MM-DD",
-                                autocomplete: "off"
-                              },
-                              model: {
-                                value: _vm.editSiswaData.diterima_tgl,
-                                callback: function($$v) {
-                                  _vm.$set(
-                                    _vm.editSiswaData,
-                                    "diterima_tgl",
-                                    $$v
-                                  )
-                                },
-                                expression: "editSiswaData.diterima_tgl"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "b-input-group-append",
-                              [
-                                _c("b-form-datepicker", {
-                                  attrs: {
-                                    id: "diterima_tgl",
-                                    "button-only": "",
-                                    right: ""
-                                  },
-                                  model: {
-                                    value: _vm.editSiswaData.diterima_tgl,
-                                    callback: function($$v) {
-                                      _vm.$set(
-                                        _vm.editSiswaData,
-                                        "diterima_tgl",
-                                        $$v
-                                      )
-                                    },
-                                    expression: "editSiswaData.diterima_tgl"
-                                  }
-                                })
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "invalid-feedback" })
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("No. Ijazah")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.no_ijazah,
-                            expression: "editSiswaData.no_ijazah"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "no_ijazah",
-                          placeholder: "Masukan Nomor Ijazah"
-                        },
-                        domProps: { value: _vm.editSiswaData.no_ijazah },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "no_ijazah",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Tahun Ijazah")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.thn_ijazah,
-                            expression: "editSiswaData.thn_ijazah"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "thn_ijazah",
-                          placeholder: "Masukan Tahun Ijazah"
-                        },
-                        domProps: { value: _vm.editSiswaData.thn_ijazah },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "thn_ijazah",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("No. SKHUN")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.no_skhun,
-                            expression: "editSiswaData.no_skhun"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "no_skhun",
-                          placeholder: "Masukan Nomor SKHUN"
-                        },
-                        domProps: { value: _vm.editSiswaData.no_skhun },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "no_skhun",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Tahun SKHUN")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.thn_skhun,
-                            expression: "editSiswaData.thn_skhun"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "thn_skhun",
-                          placeholder: "Masukan Tahun SKHUN"
-                        },
-                        domProps: { value: _vm.editSiswaData.thn_skhun },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "thn_skhun",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Nama Ayah")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nama_ayah,
-                            expression: "editSiswaData.nama_ayah"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nama_ayah",
-                          placeholder: "Masukan Nama Ayah"
-                        },
-                        domProps: { value: _vm.editSiswaData.nama_ayah },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nama_ayah",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Nama Ibu")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nama_ibu,
-                            expression: "editSiswaData.nama_ibu"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nama_ibu",
-                          placeholder: "Masukan Nama Ibu"
-                        },
-                        domProps: { value: _vm.editSiswaData.nama_ibu },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nama_ibu",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Alamat Ortu")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.almt_ortu,
-                            expression: "editSiswaData.almt_ortu"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "almt_ortu",
-                          placeholder: "Masukan Alamat Orang Tua"
-                        },
-                        domProps: { value: _vm.editSiswaData.almt_ortu },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "almt_ortu",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Telp Ortu")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.tlp_ortu,
-                            expression: "editSiswaData.tlp_ortu"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "tlp_ortu",
-                          placeholder: "Masukan No. Telepon Ortu"
-                        },
-                        domProps: { value: _vm.editSiswaData.tlp_ortu },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "tlp_ortu",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Perkerjaan Ayah")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.pekerjaan_ayah,
-                            expression: "editSiswaData.pekerjaan_ayah"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "pekerjaan_ayah",
-                          placeholder: "Masukan Perkerjaan Ayah"
-                        },
-                        domProps: { value: _vm.editSiswaData.pekerjaan_ayah },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "pekerjaan_ayah",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Perkerjaan Ibu")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.pekerjaan_ibu,
-                            expression: "editSiswaData.pekerjaan_ibu"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "pekerjaan_ibu",
-                          placeholder: "Masukan Perkerjaan Ibu"
-                        },
-                        domProps: { value: _vm.editSiswaData.pekerjaan_ibu },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "pekerjaan_ibu",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Nama Wali")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.nama_wali,
-                            expression: "editSiswaData.nama_wali"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "nama_wali",
-                          placeholder: "Masukan Nama Wali"
-                        },
-                        domProps: { value: _vm.editSiswaData.nama_wali },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "nama_wali",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Alamat Wali")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.almt_wali,
-                            expression: "editSiswaData.almt_wali"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "almt_wali",
-                          placeholder: "Masukan Alamat Wali"
-                        },
-                        domProps: { value: _vm.editSiswaData.almt_wali },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "almt_wali",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Telp Wali")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.tlp_wali,
-                            expression: "editSiswaData.tlp_wali"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "tlp_wali",
-                          placeholder: "Masukan Telp Wali"
-                        },
-                        domProps: { value: _vm.editSiswaData.tlp_wali },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "tlp_wali",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c("label", { attrs: { for: "name" } }, [
-                        _vm._v("Perkerjaan Wali")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.editSiswaData.pekerjaan_wali,
-                            expression: "editSiswaData.pekerjaan_wali"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          id: "pekerjaan_wali",
-                          placeholder: "Masukan Perkerjaan Wali"
-                        },
-                        domProps: { value: _vm.editSiswaData.pekerjaan_wali },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.editSiswaData,
-                              "pekerjaan_wali",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "invalid-feedback" })
-                    ])
-                  ])
+                  _vm.errors.nama_ekskul
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nama_ekskul[0]))
+                      ])
+                    : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("hr"),
@@ -3804,7 +607,99 @@ var render = function() {
                     {
                       staticClass: "btn btn-default",
                       attrs: { type: "button" },
-                      on: { click: _vm.hideEditSiswaModal }
+                      on: { click: _vm.hideNewEkskulModal }
+                    },
+                    [_vm._v("Batal")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _c("span", { staticClass: "fa fa-check" }),
+                      _vm._v(" Simpan\n          ")
+                    ]
+                  )
+                ])
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "b-modal",
+        {
+          ref: "editEkskulModal",
+          attrs: { "hide-footer": "", title: "Ubah Data Ekskul" }
+        },
+        [
+          _c("div", { staticClass: "d-block" }, [
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.updateEkskul($event)
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "nama_ekskul" } }, [
+                    _vm._v("Nama")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editEkskulData.nama_ekskul,
+                        expression: "editEkskulData.nama_ekskul"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "nama_ekskul",
+                      placeholder: "Masukan Nama Ekskul"
+                    },
+                    domProps: { value: _vm.editEkskulData.nama_ekskul },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.editEkskulData,
+                          "nama_ekskul",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.nama_ekskul
+                    ? _c("div", { staticClass: "invalid-feedback" }, [
+                        _vm._v(_vm._s(_vm.errors.nama_ekskul[0]))
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-right" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-default",
+                      attrs: { type: "button" },
+                      on: { click: _vm.hideEditEkskulModal }
                     },
                     [_vm._v("Batal")]
                   ),
@@ -3830,10 +725,59 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("td", [_vm._v("#")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("Nama")]),
+        _vm._v(" "),
+        _c("td", [_vm._v("AKSI")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
+
+/***/ }),
+
+/***/ "./resources/js/services/ekskul_service.js":
+/*!*************************************************!*\
+  !*** ./resources/js/services/ekskul_service.js ***!
+  \*************************************************/
+/*! exports provided: createEkskul, loadEkskuls, deleteEkskul, updateEkskul, loadMore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEkskul", function() { return createEkskul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadEkskuls", function() { return loadEkskuls; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteEkskul", function() { return deleteEkskul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateEkskul", function() { return updateEkskul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
+/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
+
+function createEkskul(data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/ekskul', data);
+}
+function loadEkskuls() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/ekskul');
+}
+function deleteEkskul(id) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/ekskul/".concat(id));
+}
+function updateEkskul(id, data) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/ekskul/".concat(id), data);
+}
+function loadMore(nextPage) {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/ekskul?page=".concat(nextPage));
+}
 
 /***/ }),
 
@@ -3869,51 +813,17 @@ function httpFile() {
 
 /***/ }),
 
-/***/ "./resources/js/services/siswa_service.js":
-/*!************************************************!*\
-  !*** ./resources/js/services/siswa_service.js ***!
-  \************************************************/
-/*! exports provided: createSiswa, loadSiswas, deleteSiswa, updateSiswa, loadMore */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSiswa", function() { return createSiswa; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadSiswas", function() { return loadSiswas; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteSiswa", function() { return deleteSiswa; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateSiswa", function() { return updateSiswa; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
-/* harmony import */ var _http_service_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./http_service.js */ "./resources/js/services/http_service.js");
-
-function createSiswa(data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post('/siswa', data);
-}
-function loadSiswas() {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/siswa');
-}
-function deleteSiswa(id) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/siswa/".concat(id));
-}
-function updateSiswa(id, data) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["httpFile"])().post("/siswa/".concat(id), data);
-}
-function loadMore(nextPage) {
-  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get("/siswa?page=".concat(nextPage));
-}
-
-/***/ }),
-
-/***/ "./resources/js/views/Siswas.vue":
-/*!***************************************!*\
-  !*** ./resources/js/views/Siswas.vue ***!
-  \***************************************/
+/***/ "./resources/js/views/Ekskuls.vue":
+/*!****************************************!*\
+  !*** ./resources/js/views/Ekskuls.vue ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Siswas.vue?vue&type=template&id=30bb68cb& */ "./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb&");
-/* harmony import */ var _Siswas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Siswas.vue?vue&type=script&lang=js& */ "./resources/js/views/Siswas.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Ekskuls.vue?vue&type=template&id=3429f0a2& */ "./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&");
+/* harmony import */ var _Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ekskuls.vue?vue&type=script&lang=js& */ "./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -3923,9 +833,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Siswas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -3935,38 +845,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/views/Siswas.vue"
+component.options.__file = "resources/js/views/Ekskuls.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/views/Siswas.vue?vue&type=script&lang=js&":
-/*!****************************************************************!*\
-  !*** ./resources/js/views/Siswas.vue?vue&type=script&lang=js& ***!
-  \****************************************************************/
+/***/ "./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&":
+/*!*****************************************************************!*\
+  !*** ./resources/js/views/Ekskuls.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Siswas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Siswas.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Siswas.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Siswas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Ekskuls.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb& ***!
-  \**********************************************************************/
+/***/ "./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2& ***!
+  \***********************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Siswas.vue?vue&type=template&id=30bb68cb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Siswas.vue?vue&type=template&id=30bb68cb&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Ekskuls.vue?vue&type=template&id=3429f0a2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/Ekskuls.vue?vue&type=template&id=3429f0a2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Siswas_vue_vue_type_template_id_30bb68cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ekskuls_vue_vue_type_template_id_3429f0a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
