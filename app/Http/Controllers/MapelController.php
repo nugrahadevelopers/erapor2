@@ -18,6 +18,12 @@ class MapelController extends Controller
         return response()->json($mapels, 200);
     }
 
+    public function indexAll()
+    {
+        $mapels = Mapel::all();
+        return response()->json($mapels, 200);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

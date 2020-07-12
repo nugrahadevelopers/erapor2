@@ -1,4 +1,7 @@
-import { http, httpFile } from './http_service.js';
+import {
+    http,
+    httpFile
+} from './http_service.js';
 
 export function createGuru(data) {
     return httpFile().post('/guru', data);
@@ -6,6 +9,10 @@ export function createGuru(data) {
 
 export function loadGurus() {
     return http().get('/guru');
+}
+
+export function loadGurusAll() {
+    return http().get('/guruall');
 }
 
 export function deleteGuru(id) {

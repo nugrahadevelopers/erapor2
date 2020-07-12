@@ -963,13 +963,14 @@ render._withStripped = true
 /*!***********************************************!*\
   !*** ./resources/js/services/guru_service.js ***!
   \***********************************************/
-/*! exports provided: createGuru, loadGurus, deleteGuru, updateGuru, loadMore */
+/*! exports provided: createGuru, loadGurus, loadGurusAll, deleteGuru, updateGuru, loadMore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGuru", function() { return createGuru; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadGurus", function() { return loadGurus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadGurusAll", function() { return loadGurusAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteGuru", function() { return deleteGuru; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateGuru", function() { return updateGuru; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
@@ -980,6 +981,9 @@ function createGuru(data) {
 }
 function loadGurus() {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/guru');
+}
+function loadGurusAll() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/guruall');
 }
 function deleteGuru(id) {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/guru/".concat(id));

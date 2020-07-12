@@ -11,6 +11,10 @@ export function loadMapels() {
     return http().get('/mapel');
 }
 
+export function loadMapelsAll() {
+    return http().get('/mapelall');
+}
+
 export function deleteMapel(id) {
     return http().delete(`/mapel/${id}`);
 }

@@ -878,13 +878,14 @@ function httpFile() {
 /*!************************************************!*\
   !*** ./resources/js/services/kelas_service.js ***!
   \************************************************/
-/*! exports provided: createKelas, loadKelass, deleteKelas, updateKelas, updateKuota, hapusKuota, loadMore */
+/*! exports provided: createKelas, loadKelass, loadKelassAll, deleteKelas, updateKelas, updateKuota, hapusKuota, loadMore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createKelas", function() { return createKelas; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadKelass", function() { return loadKelass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadKelassAll", function() { return loadKelassAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteKelas", function() { return deleteKelas; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateKelas", function() { return updateKelas; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateKuota", function() { return updateKuota; });
@@ -897,6 +898,9 @@ function createKelas(data) {
 }
 function loadKelass() {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/kela');
+}
+function loadKelassAll() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/kelaall');
 }
 function deleteKelas(id) {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/kela/".concat(id));

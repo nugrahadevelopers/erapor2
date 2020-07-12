@@ -46,6 +46,16 @@ const routes = [{
         name: 'tambahsiswa',
         component: () => import('./views/AddSiswa.vue'),
         props: true
+    },
+    {
+        path: '/kelmapel',
+        name: 'kelmapel',
+        component: () => import('./views/Kelmapels.vue')
+    },
+    {
+        path: '/walkel',
+        name: 'walkel',
+        component: () => import('./views/Walkels.vue')
     }
 ]
 

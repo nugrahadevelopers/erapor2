@@ -63,6 +63,8 @@
               <router-link to="/kelas" class="nav-link" exact>Kelas</router-link>
               <router-link to="/ekskul" class="nav-link" exact>Ekstrakulikuler</router-link>
               <router-link to="/setkelas" class="nav-link" exact>Kelompok Kelas</router-link>
+              <router-link to="/kelmapel" class="nav-link" exact>Kelompok Mapel</router-link>
+              <router-link to="/walkel" class="nav-link" exact>Wali Kelas</router-link>
             </nav>
           </div>
         </div>

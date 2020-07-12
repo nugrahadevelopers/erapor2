@@ -15,8 +15,13 @@ class KelaController extends Controller
     public function index()
     {
         $kelas = Kela::orderBy('created_at', 'desc')->paginate(10);
-        // $kelas = Kela::all();
-        // $kelas = Kela::with('siswa')->get();
+        return response()->json($kelas, 200);
+    }
+
+    public function indexAll()
+    {
+
+        $kelas = Kela::all();
         return response()->json($kelas, 200);
     }
 

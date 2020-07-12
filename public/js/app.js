@@ -62396,6 +62396,24 @@ var render = function() {
                           attrs: { to: "/setkelas", exact: "" }
                         },
                         [_vm._v("Kelompok Kelas")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/kelmapel", exact: "" }
+                        },
+                        [_vm._v("Kelompok Mapel")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "nav-link",
+                          attrs: { to: "/walkel", exact: "" }
+                        },
+                        [_vm._v("Wali Kelas")]
                       )
                     ],
                     1
@@ -79426,6 +79444,18 @@ var routes = [{
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./views/AddSiswa.vue */ "./resources/js/views/AddSiswa.vue"));
   },
   props: true
+}, {
+  path: '/kelmapel',
+  name: 'kelmapel',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ./views/Kelmapels.vue */ "./resources/js/views/Kelmapels.vue"));
+  }
+}, {
+  path: '/walkel',
+  name: 'walkel',
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ./views/Walkels.vue */ "./resources/js/views/Walkels.vue"));
+  }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes,

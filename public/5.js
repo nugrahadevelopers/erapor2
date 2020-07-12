@@ -1121,13 +1121,14 @@ function httpFile() {
 /*!************************************************!*\
   !*** ./resources/js/services/mapel_service.js ***!
   \************************************************/
-/*! exports provided: createMapel, loadMapels, deleteMapel, updateMapel, loadMore */
+/*! exports provided: createMapel, loadMapels, loadMapelsAll, deleteMapel, updateMapel, loadMore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createMapel", function() { return createMapel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMapels", function() { return loadMapels; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMapelsAll", function() { return loadMapelsAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteMapel", function() { return deleteMapel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateMapel", function() { return updateMapel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadMore", function() { return loadMore; });
@@ -1138,6 +1139,9 @@ function createMapel(data) {
 }
 function loadMapels() {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/mapel');
+}
+function loadMapelsAll() {
+  return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])().get('/mapelall');
 }
 function deleteMapel(id) {
   return Object(_http_service_js__WEBPACK_IMPORTED_MODULE_0__["http"])()["delete"]("/mapel/".concat(id));

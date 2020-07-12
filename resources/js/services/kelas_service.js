@@ -11,6 +11,10 @@ export function loadKelass() {
     return http().get('/kela');
 }
 
+export function loadKelassAll() {
+    return http().get('/kelaall');
+}
+
 export function deleteKelas(id) {
     return http().delete(`/kela/${id}`);
 }

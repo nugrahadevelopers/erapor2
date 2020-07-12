@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Guru;
+use App\Kelmapel;
 use Illuminate\Http\Request;
 
-class GuruController extends Controller
+class KelmapelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,8 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $gurus = Guru::orderBy('created_at', 'desc')->paginate(5);
-        return response()->json($gurus, 200);
-    }
-
-    public function indexAll()
-    {
-        $gurus = Guru::all();
-        return response()->json($gurus, 200);
+        $kelmapel = Kelmapel::with('mapel', 'guru', 'kela')->get();
+        return response()->json($kelmapel, 200);
     }
 
     /**
@@ -43,18 +37,18 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:gurus',
-            'phone' => 'required',
-            'address' => 'required',
+            'mapel_id' => 'required',
+            'guru_id' => 'required',
+            'kela_id' => 'required',
         ]);
 
-        $guru = new Guru();
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $kelmapel = new Kelmapel();
+        $kelmapel->mapel_id = $request->mapel_id;
+        $kelmapel->guru_id = $request->guru_id;
+        $kelmapel->kela_id = $request->kela_id;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($kelmapel->save()) {
+            return response()->json($kelmapel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -66,10 +60,10 @@ class GuruController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kelmapel  $kelmapel
      * @return \Illuminate\Http\Response
      */
-    public function show(Guru $guru)
+    public function show(Kelmapel $kelmapel)
     {
         //
     }
@@ -77,10 +71,10 @@ class GuruController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kelmapel  $kelmapel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Guru $guru)
+    public function edit(Kelmapel $kelmapel)
     {
         //
     }
@@ -89,23 +83,23 @@ class GuruController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Guru  $guru
+     * @param  \App\Kelmapel  $kelmapel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Guru $guru)
+    public function update(Request $request, Kelmapel $kelmapel)
     {
         $request->validate([
-            'name' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
+            'mapel_id' => 'required',
+            'guru_id' => 'required',
+            'kela_id' => 'required',
         ]);
 
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $kelmapel->mapel_id = $request->mapel_id;
+        $kelmapel->guru_id = $request->guru_id;
+        $kelmapel->kela_id = $request->kela_id;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($kelmapel->save()) {
+            return response()->json($kelmapel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -117,12 +111,12 @@ class GuruController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Kelmapel  $kelmapel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Guru $guru)
+    public function destroy(Kelmapel $kelmapel)
     {
-        if ($guru->delete()) {
+        if ($kelmapel->delete()) {
             return response()->json([
                 'message' => 'Berhasil Dihapus',
                 'status' => 200

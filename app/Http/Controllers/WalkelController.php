@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Guru;
+use App\Walkel;
 use Illuminate\Http\Request;
 
-class GuruController extends Controller
+class WalkelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,8 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $gurus = Guru::orderBy('created_at', 'desc')->paginate(5);
-        return response()->json($gurus, 200);
-    }
-
-    public function indexAll()
-    {
-        $gurus = Guru::all();
-        return response()->json($gurus, 200);
+        $walkes = Walkel::with('guru', 'kela')->get();
+        return response()->json($walkes, 200);
     }
 
     /**
@@ -43,18 +37,16 @@ class GuruController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:gurus',
-            'phone' => 'required',
-            'address' => 'required',
+            'kela_id' => 'required',
+            'guru_id' => 'required'
         ]);
 
-        $guru = new Guru();
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $walkel = new Walkel();
+        $walkel->kela_id = $request->kela_id;
+        $walkel->guru_id = $request->guru_id;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($walkel->save()) {
+            return response()->json($walkel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -66,10 +58,10 @@ class GuruController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Walkel  $walkel
      * @return \Illuminate\Http\Response
      */
-    public function show(Guru $guru)
+    public function show(Walkel $walkel)
     {
         //
     }
@@ -77,10 +69,10 @@ class GuruController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Walkel  $walkel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Guru $guru)
+    public function edit(Walkel $walkel)
     {
         //
     }
@@ -89,23 +81,21 @@ class GuruController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Guru  $guru
+     * @param  \App\Walkel  $walkel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Guru $guru)
+    public function update(Request $request, Walkel $walkel)
     {
         $request->validate([
-            'name' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
+            'kela_id' => 'required',
+            'guru_id' => 'required'
         ]);
 
-        $guru->name = $request->name;
-        $guru->phone = $request->phone;
-        $guru->address = $request->address;
+        $walkel->kela_id = $request->kela_id;
+        $walkel->guru_id = $request->guru_id;
 
-        if ($guru->save()) {
-            return response()->json($guru, 200);
+        if ($walkel->save()) {
+            return response()->json($walkel, 200);
         } else {
             return response()->json([
                 'message' => 'Terjadi Kesalahan, Silahkan Coba Kembali!',
@@ -117,12 +107,12 @@ class GuruController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Guru  $guru
+     * @param  \App\Walkel  $walkel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Guru $guru)
+    public function destroy(Walkel $walkel)
     {
-        if ($guru->delete()) {
+        if ($walkel->delete()) {
             return response()->json([
                 'message' => 'Berhasil Dihapus',
                 'status' => 200
